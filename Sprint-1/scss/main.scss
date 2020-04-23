@@ -4,6 +4,8 @@
 @import "partials/mixins";
 @import "partials/header";
 
+// Hero Styles
+
 .hero{
     // padding: 0 16px;
     height: 32vh;
@@ -42,6 +44,7 @@
     }
 }
 
+// Musician Styles
 .musicians{
     &__head{
         @include header-2;
@@ -75,13 +78,19 @@
     }
     .article {
         @include textContent-2;
-        font-size: $mParagraphSize + .1rem;
-        width: 95%;
+        line-height: $mParagraphLineHeight + .2rem;
+        font-size: $mParagraphSize + .13rem;
+        width: 96%;
     }
     .top {
         margin-bottom: $mspaceSmall;
     }
+    .bottom {
+        margin-bottom: $mspaceLarge;
+    }
 }
+
+// Gallery Styles
 
        
 
