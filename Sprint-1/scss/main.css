@@ -171,7 +171,7 @@ a {
 }
 
 .musicians__quote {
-  font-size: 1.3rem;
+  font-size: 1.15rem;
   line-height: 1.9rem;
   font-weight: 500;
   text-align: left;
@@ -209,5 +209,33 @@ a {
 
 .musicians .bottom {
   margin-bottom: 2.5rem;
+}
+
+.gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.gallery__head {
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+  font-weight: 900;
+  padding-bottom: 1.5rem;
+}
+
+.gallery__img {
+  width: 100%;
+  min-width: 18rem;
+  height: 9.0625rem;
+  background-color: blue;
+  margin-bottom: 1rem;
 }
 /*# sourceMappingURL=main.css.map */

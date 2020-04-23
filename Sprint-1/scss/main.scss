@@ -58,7 +58,7 @@
     }
     &__quote {
         // @include subHead-2; 
-        font-size: 1.3rem;
+        font-size: 1.15rem;
         line-height: 1.9rem;
         font-weight: 500;
         text-align: left;
@@ -91,6 +91,23 @@
 }
 
 // Gallery Styles
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    &__head{
+        @include header-2;
+        padding-bottom: $mspaceSmall;
+    }
+    &__img{
+        width: 100%;
+        min-width: 18rem;
+        height: 9.0625rem;
+        background-color: blue;
+        margin-bottom: $mspaceXSmall;
+    }
+}
 
        
 
