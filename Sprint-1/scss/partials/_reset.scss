@@ -1,0 +1,26 @@
+
+// CSS Reset
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 16px;
+	font: inherit;
+	vertical-align: baseline;
+	font-family: 'Roboto', sans-serif;
+	color: #323232;
+	box-sizing: border-box;
+}
+
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+

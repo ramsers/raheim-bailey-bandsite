@@ -1,0 +1,93 @@
+@import "variables";
+@import "global-styles";
+
+
+// Desktop & Tablet Text Mixins
+
+@mixin heroHead {
+    font-size: $heroHeader;
+    line-height: $heroLineHeight;
+    font-weight: $heroFontWeight;
+}
+
+@mixin header {
+    font-size:$header;
+    line-height: $headerLineHeight;
+    font-weight: $headerFontWeight;
+}
+
+@mixin secondHead {
+    font-size:$sHeader;
+    line-height:$sHeaderLineHeight;
+    font-weight:$sHeaderFontWeight;
+}
+
+@mixin subHead {
+    font-size:$subHeader;
+    line-height:$subHeaderHeight;
+    font-weight:$subHeaderFontWeight;
+}
+
+@mixin textContent {
+    font-size:$paragraphSize;
+    line-height:$paragraphHeight;
+    font-weight:$paragraphFontWeight;
+}
+
+@mixin footerContent {
+    font-size:$contactSize;
+    line-height:$contactLineHeight;
+    font-weight:$contactFontWeight;
+}
+
+@mixin footerText {
+    font-size:$labelSize;
+    line-height:$labelLineHeight;
+    font-weight:$labelFontWeight;
+}
+
+
+// Mobile Text Mixins
+
+@mixin header-2 {
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    font-weight: $mHeaderFontWeight;
+}
+@mixin subHead-2{
+    font-size: $mSubHeaderSize;
+    line-height: $mSubHeaderLineHeight;
+    font-weight: $mSubHeaderFontWeight;
+}
+@mixin textContent-2{
+    font-size: $mParagraphSize;
+    line-height: $mParagraphLineHeight;
+    font-weight: $mParagraphFontWeight;
+}
+@mixin footerContent-2{
+    font-size: $mContactSize;
+    line-height: $mContactLineHeight;
+    font-weight: $mContactFontWeight;
+}
+// Nav Mixin
+
+@mixin navLink {
+    font-size: 1.25rem;
+    line-height: 1.375rem;
+    font-weight: $mLabelFontWeight;
+    color: $silver;
+}
+
+// Desktop & Tablet Breakpoint Mixins
+
+@mixin tablet {
+    @media (min-width: $tablet-breakpoint) {
+      @content;
+    }
+  }
+  
+  @mixin desktop {
+    @media (min-width: $desktop-breakpoint) {
+      @content;
+    }
+  }

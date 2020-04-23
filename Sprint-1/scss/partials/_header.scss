@@ -1,0 +1,36 @@
+// Start of Header Style
+@import "reset";
+@import "variables";
+@import "mixins";
+
+
+.main-nav{
+    background-color: $black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 6.4375rem;
+    padding: 1rem 1rem;
+    .main{
+        &__logo {
+            width: 9rem;
+            padding-bottom: 1rem;
+        }
+    }
+    &__navbar {
+        width: 100%;
+    }
+        &__list {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        &__link {
+            @include navLink;
+        }
+}
+
+

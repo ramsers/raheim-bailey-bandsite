@@ -1,0 +1,168 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 16px;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: 'Roboto', sans-serif;
+  color: #323232;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*Desktop & Tablet Text Variables */
+/* Mobile Text Variables */
+/*Desktop & Tablet Text Variables */
+/* Mobile Text Variables */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 16px;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: 'Roboto', sans-serif;
+  color: #323232;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*Desktop & Tablet Text Variables */
+/* Mobile Text Variables */
+/*Desktop & Tablet Text Variables */
+/* Mobile Text Variables */
+.main-nav {
+  background-color: #323232;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 6.4375rem;
+  padding: 1rem 1rem;
+}
+
+.main-nav .main__logo {
+  width: 9rem;
+  padding-bottom: 1rem;
+}
+
+.main-nav__navbar {
+  width: 100%;
+}
+
+.main-nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.main-nav__link {
+  font-size: 1.25rem;
+  line-height: 1.375rem;
+  font-weight: 500;
+  color: #AFAFAF;
+}
+
+.hero {
+  height: 32vh;
+  width: 100vw;
+  background-image: url("../assets/Images/Gaspard_Augé_and_Xavier_de_Rosnay_(Justice).jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.hero__ctn {
+  height: inherit;
+  width: 100vw;
+  background-color: #323232;
+  opacity: 50%;
+  position: absolute;
+  top: 6.4rem;
+  z-index: 1;
+}
+
+.hero__head {
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+  font-weight: 900;
+  width: 84%;
+  color: #ffffff;
+  opacity: 1;
+  z-index: 2;
+  position: relative;
+  padding: 0 1rem;
+}
+
+.content {
+  padding: 0 1rem;
+}
+
+.musicians__head {
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+  font-weight: 900;
+  margin-top: 2rem;
+}
+
+.musicians__img {
+  padding-top: 2rem;
+  width: 100%;
+  height: 63vw;
+  padding-bottom: 1.5rem;
+}
+/*# sourceMappingURL=main.css.map */

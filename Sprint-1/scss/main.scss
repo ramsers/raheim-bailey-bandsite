@@ -1,0 +1,54 @@
+@import "partials/reset";
+@import "partials/global-styles";
+@import "partials/variables";
+@import "partials/mixins";
+@import "partials/header";
+
+.hero{
+    // padding: 0 16px;
+    height: 32vh;
+    width: 100vw;
+    background-image: url('../assets/Images/Gaspard_Augé_and_Xavier_de_Rosnay_\(Justice\).jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    justify-content: center;
+    &__ctn{
+        height: inherit;
+        width: 100vw;
+        background-color: $black;
+        opacity: 50%;
+        position: absolute;
+        top: 6.4rem;
+        z-index: 1;
+    }
+    &__head {
+        @include header-2;
+        width:84%;
+        color: $white;
+        opacity: 1;
+        z-index: 2;
+        position: relative;
+        padding: 0 $mspaceXSmall;
+    }
+}
+
+.content {
+    padding:  0 $mspaceXSmall;
+}
+
+.musicians{
+    &__head{
+        @include header-2;
+        margin-top: $mspaceMedium; 
+    }
+}
+.musicians__img {
+    padding-top: $mspaceMedium;
+    width: 100%;
+    height:63vw;
+    padding-bottom: $mspaceSmall;
+}
