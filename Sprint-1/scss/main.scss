@@ -35,9 +35,11 @@
         padding: 0 $mspaceXSmall;
     }
 }
-
 .content {
-    padding:  0 $mspaceXSmall;
+    height: 100vh;
+    .content-wrapper {
+        padding:  0 $mspaceXSmall;
+    }
 }
 
 .musicians{
@@ -45,10 +47,47 @@
         @include header-2;
         margin-top: $mspaceMedium; 
     }
+    &__img {
+        padding-top: $mspaceMedium;
+        width: 100%;
+        height:63vw;
+        padding-bottom: $mspaceSmall;
+    }
+    &__quote {
+        // @include subHead-2; 
+        font-size: 1.3rem;
+        line-height: 1.9rem;
+        font-weight: 500;
+        text-align: left;
+        padding-bottom: $mspaceSmall;
+    }
+    &__head-2{
+        @include subHead-2;
+        font-size: 1.1rem;
+        padding-bottom: $mspaceSmall;
+    }
+    .author{
+        font-size: $subHeader;
+        font-weight: 500;
+        text-align: left;
+        margin-bottom: $mspaceLarge;
+        display: inline-block;
+    }
+    .article {
+        @include textContent-2;
+        font-size: $mParagraphSize + .1rem;
+        width: 95%;
+    }
+    .top {
+        margin-bottom: $mspaceSmall;
+    }
 }
-.musicians__img {
-    padding-top: $mspaceMedium;
-    width: 100%;
-    height:63vw;
-    padding-bottom: $mspaceSmall;
-}
+
+       
+
+
+
+
+
+
+

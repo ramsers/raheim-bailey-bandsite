@@ -149,6 +149,10 @@ a {
 }
 
 .content {
+  height: 100vh;
+}
+
+.content .content-wrapper {
   padding: 0 1rem;
 }
 
@@ -164,5 +168,41 @@ a {
   width: 100%;
   height: 63vw;
   padding-bottom: 1.5rem;
+}
+
+.musicians__quote {
+  font-size: 1.3rem;
+  line-height: 1.9rem;
+  font-weight: 500;
+  text-align: left;
+  padding-bottom: 1.5rem;
+}
+
+.musicians__head-2 {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding-bottom: 1.5rem;
+}
+
+.musicians .author {
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: left;
+  margin-bottom: 2.5rem;
+  display: inline-block;
+}
+
+.musicians .article {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+  font-size: 0.9125rem;
+  width: 95%;
+}
+
+.musicians .top {
+  margin-bottom: 1.5rem;
 }
 /*# sourceMappingURL=main.css.map */
