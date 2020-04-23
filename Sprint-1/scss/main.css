@@ -108,7 +108,7 @@ a {
 }
 
 .hero {
-  height: 32vh;
+  height: 58vw;
   width: 100vw;
   background-image: url("../assets/Images/Gaspard_Augé_and_Xavier_de_Rosnay_(Justice).jpg");
   background-size: cover;
@@ -233,8 +233,8 @@ a {
 
 .gallery__img {
   width: 100%;
-  min-width: 18rem;
-  height: 9.0625rem;
+  min-width: 288px;
+  height: 45vw;
   background-color: blue;
   margin-bottom: 1rem;
 }
