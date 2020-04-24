@@ -50,8 +50,8 @@
 // Mobile Text Mixins
 
 @mixin header-2 {
-    font-size: 1.8rem;
-    line-height: 2.6rem;
+    font-size: $mHeaderSize;
+    line-height: $mHeaderLineHeight;
     font-weight: $mHeaderFontWeight;
 }
 @mixin subHead-2{

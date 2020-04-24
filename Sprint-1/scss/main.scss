@@ -37,8 +37,10 @@
         padding: 0 $mspaceXSmall;
     }
 }
+
+// Main area Height & Padding
 .content {
-    height: 100vh;
+    // height: 100vh;
     .content-wrapper {
         padding:  0 $mspaceXSmall;
     }
@@ -53,14 +55,14 @@
     &__img {
         padding-top: $mspaceMedium;
         width: 100%;
-        height:63vw;
+        height:69vw;
         padding-bottom: $mspaceSmall;
     }
     &__quote {
         // @include subHead-2; 
         font-size: 1.15rem;
         line-height: 1.9rem;
-        font-weight: 500;
+        font-weight: 700;
         text-align: left;
         padding-bottom: $mspaceSmall;
     }
@@ -71,7 +73,7 @@
     }
     .author{
         font-size: $subHeader;
-        font-weight: 500;
+        font-weight: 700;
         text-align: left;
         margin-bottom: $mspaceLarge;
         display: inline-block;
@@ -146,7 +148,9 @@
 }
 
        
-
+footer {
+    // height: 100vh;
+}
 
 
 
