@@ -1,28 +1,11 @@
 @import "global-styles";
 
-@font-face {
-    font-family: "AvenirNextLTPro";
-    src: url('../../assets/AvenirNextProLT/Linotype\ -\ AvenirNextLTPro-Regular.otf') format('otf');
-    src: url('../../assets/AvenirNextProLT/Alternative-files/Linotype\ -\ Avenir\ Next\ LT\ Pro.ttf') format('ttf');
-    font-weight: normal;
-}
 
-@font-face {
-    font-family: "AvenirNextLTPro";
-    src: url('../../assets/AvenirNextProLT/Linotype\ -\ AvenirNextLTPro-Demi.otf') format('otf');
-    src: url('../../assets/AvenirNextProLT/Alternative-files/Linotype\ -\ Avenir\ Next\ LT\ Pro\ Demi.ttf') format('ttf');
-    font-weight: 700;
-}
-@font-face {
-    font-family: "AvenirNextLTPro";
-    src: url('../../assets/AvenirNextProLT/Linotype\ -\ AvenirNextLTPro-Bold.otf') format('otf');
-    src: url('../../assets/AvenirNextProLT/Alternative-files/Linotype\ -\ Avenir\ Next\ LT\ Pro\ Bold.ttf') format('ttf');
-    font-weight: 900;
-}
 
 /*Desktop & Tablet Text Variables */
 
 // Desktop & Tablet Breakpoint Variables
+$mobilelg-breakpoint: 425px;
 $tablet-breakpoint: 768px;
 $desktop-breakpoint: 1024px;
 

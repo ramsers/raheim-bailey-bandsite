@@ -1,6 +1,6 @@
 @import "partials/reset";
-@import "partials/global-styles";
 @import "partials/variables";
+@import "partials/global-styles";
 @import "partials/mixins";
 @import "partials/header";
 
@@ -29,7 +29,9 @@
     }
     &__head {
         @include header-2;
-        width:84%;
+        font-size: 1.5rem;
+        line-height: 2.1rem;
+        width: 69%;
         color: $white;
         opacity: 1;
         z-index: 2;
@@ -38,13 +40,6 @@
     }
 }
 
-// Main area Height & Padding
-.content {
-    // height: 100vh;
-    .content-wrapper {
-        // padding:  0 $mspaceXSmall;
-    }
-}
 
 // Musician Styles
 .musicians{
@@ -68,18 +63,21 @@
         // @include subHead-2; 
         font-size: 1.15rem;
         line-height: 1.9rem;
-        font-weight: 700;
+        font-family: "Roboto";
+        font-weight: 500;
         text-align: left;
         padding-bottom: $mspaceSmall;
+        width: 93%;
     }
     &__head-2{
         @include subHead-2;
+        font-weight: 500;
         font-size: 1.1rem;
         padding-bottom: $mspaceSmall;
     }
     .author{
-        font-size: $subHeader;
-        font-weight: 700;
+        font-size: 1.1rem;
+        font-weight: 500;
         text-align: left;
         margin-bottom: $mspaceLarge;
         display: inline-block;
@@ -191,7 +189,7 @@ footer {
         .contact-head{
             color: $white;
             font-size: 1rem;
-            font-weight: 600;
+            font-weight: 400;
             line-height: $subHeaderHeight;
         }
         .contact-item{

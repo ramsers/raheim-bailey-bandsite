@@ -74,7 +74,7 @@
 @mixin navLink {
     font-size: 1.25rem;
     line-height: 1.375rem;
-    font-weight: $mLabelFontWeight;
+    font-weight: 400;
     color: $silver;
 }
 
@@ -85,6 +85,13 @@
     background-repeat: no-repeat;
 }
 // Desktop & Tablet Breakpoint Mixins
+
+
+@mixin mobile-lg{
+    @media (min-width: $mobilelg-breakpoint) {
+        
+    }
+}
 
 @mixin tablet {
     @media (min-width: $tablet-breakpoint) {

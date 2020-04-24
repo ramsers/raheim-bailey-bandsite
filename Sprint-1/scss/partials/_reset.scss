@@ -1,4 +1,26 @@
 @import 'variables';
+
+@font-face {
+	font-family: "Roboto";
+	src: url('../../assets/roboto/Roboto-Regular.ttf') format('ttf');
+}
+
+@font-face {
+	font-family: "Roboto";
+	src: url('../../assets/roboto/Roboto-Medium.ttf') format('ttf');
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: "Roboto";
+	src: url('../../assets/roboto/Roboto-Bold.ttf') format('ttf');
+	font-weight: 700;
+}
+@font-face {
+	font-family: "Roboto";
+	src: url('../../assets/roboto/Roboto-Black.ttf') format('ttf');
+	font-weight: 900;
+}
 // CSS Reset
 * {
 	margin: 0;
@@ -7,20 +29,23 @@
 	font-size: 16px;
 	font: inherit;
 	vertical-align: baseline;
-	font-family: 'AvenirNextLTPro', sans-serif;
+	font-family: "Roboto";
 	color: #323232;
 	box-sizing: border-box;
 }
 
 body {
 	line-height: 1;
+	font-family: "Roboto";
 }
-ol, ul {
+ol, ul, li {
 	list-style: none;
+	font-family: "Roboto";
 }
 
 a {
 	text-decoration: none;
+	font-family: "Roboto";
 }
 
 
