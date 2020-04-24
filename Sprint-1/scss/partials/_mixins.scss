@@ -78,6 +78,12 @@
     color: $silver;
 }
 
+// Img Gallery Mixin
+@mixin imgGallery {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
 // Desktop & Tablet Breakpoint Mixins
 
 @mixin tablet {

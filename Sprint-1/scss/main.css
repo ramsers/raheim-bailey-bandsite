@@ -234,8 +234,71 @@ a {
 .gallery__img {
   width: 100%;
   min-width: 288px;
-  height: 45vw;
+  height: 50vw;
   background-color: blue;
   margin-bottom: 1rem;
+}
+
+.gallery .img-1 {
+  background-image: url("../assets/Images/Photo-gallery-1.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.gallery .img-2 {
+  background-image: url("../assets/Images/Photo-gallery-2.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.gallery .img-3 {
+  background-image: url("../assets/Images/Photo-gallery-3.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.gallery .img-4 {
+  background-image: url("../assets/Images/Photo-gallery-4.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.gallery .img-5 {
+  background-image: url("../assets/Images/Photo-gallery-5.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.gallery .img-6 {
+  background-image: url("../assets/Images/Photo-gallery-6.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.gallery .img-7 {
+  background-image: url("../assets/Images/Photo-gallery-7.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.gallery .img-8 {
+  background-image: url("../assets/Images/Photo-gallery-8.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.gallery .img-9 {
+  background-image: url("../assets/Images/Photo-gallery-9.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 /*# sourceMappingURL=main.css.map */
