@@ -38,6 +38,14 @@
         position: relative;
         padding: 0 $mspaceXSmall;
     }
+    @include mobile-lg {
+        .hero{
+            &__head{
+                font-size: 2rem;
+                line-height: 2.7rem;
+            }
+        }
+    }
 }
 
 
@@ -84,7 +92,7 @@
     }
     .article {
         @include textContent-2;
-        line-height: $mParagraphLineHeight + .2rem;
+        line-height: 1.525rem;
         font-size: $mParagraphSize + .13rem;
         width: 96%;
     }
@@ -93,6 +101,13 @@
     }
     .bottom {
         margin-bottom: $mspaceLarge;
+    }
+    @include mobile-lg {
+        .musicians{
+            &__head{
+                font-size: 2rem;
+            }
+        }
     }
 }
 
@@ -156,64 +171,80 @@
         background-image: url('../assets/Images/Photo-gallery-9.jpg');
         @include imgGallery;
     }
+    @include mobile-lg {
+        .gallery{
+            &__head{
+                font-size: 2rem;
+            }
+        }
+    }
 }
 
     // Footer   
-footer {
+.intouch {
     width: 100vw;
     background-color: $black;
     color: $white;
     padding-top: $mspaceLarge;
-    height: 54rem;
-    .footer-head {
-        @include header-2;
-        color:$white;
-        font-size: 2rem;
-        padding: 0 0 $mspaceMedium $mspaceXSmall;
+    height: 54rem;   
+}
+.footer-head {
+    @include header-2;
+    color:$white;
+    font-size: 2rem;
+    padding: 0 0 $mspaceMedium $mspaceXSmall;
+}
+.footer-wrap{
+    padding: 0 $mspaceXSmall;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    // align-items: flex-start;
+}
+.icon {
+    color: $white;
+    height: $mHeaderSize;
+    margin-right: $mspaceMedium;
+    margin-bottom: $mspaceLarge;
+}
+.footer-logo {
+    display: none;
+}
+.contact-head{
+    color: $white;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: $subHeaderHeight;
+}
+.contact-item{
+    color: $silver;
+    width: 65%;
+    line-height: $subHeaderHeight;
+    padding: $mspaceSmall 0 $mspaceSmall 0;
+}
+.contact-link{
+    padding-bottom: $mspaceLarge;
+}
+.contact-email{
+    color: $silver;
+    font-size: $mContactSize + .07rem;
+}
+.copyright {
+    color: $silver;
+    width: 86%;
+    line-height: $subHeaderHeight;
+}
+@include mobile-lg {
+    .intouch {
+        height: 50rem;
     }
-    .footer-wrap{
-        padding: 0 $mspaceXSmall;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        // align-items: flex-start;
-        .icon {
-            color: $white;
-            height: $mHeaderSize;
-            margin-right: $mspaceMedium;
-            margin-bottom: $mspaceLarge;
-        }
-        .footer-logo {
-            display: none;
-        }
-        .contact-head{
-            color: $white;
-            font-size: 1rem;
-            font-weight: 400;
-            line-height: $subHeaderHeight;
-        }
-        .contact-item{
-            color: $silver;
-            width: 65%;
-            line-height: $subHeaderHeight;
-            padding: $mspaceSmall 0 $mspaceSmall 0;
-        }
-        .contact-link{
-            padding-bottom: $mspaceLarge;
-        }
-        .contact-email{
-            color: $silver;
-            font-size: $mContactSize + .07rem;
-        }
-        .copyright {
-            color: $silver;
-            width: 86%;
-            line-height: $subHeaderHeight;
-        }
+    .footer-head{
+        font-size: 3rem;
+    }
+    .contact-head {
+        font-size: 1.15rem;
     }
 }
-
-
 
 
 

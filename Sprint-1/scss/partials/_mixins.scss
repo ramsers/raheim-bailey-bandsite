@@ -89,7 +89,7 @@
 
 @mixin mobile-lg{
     @media (min-width: $mobilelg-breakpoint) {
-        
+        @content;
     }
 }
 

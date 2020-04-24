@@ -132,10 +132,26 @@ a {
           align-items: center;
   width: 100vw;
   height: 6.4375rem;
-  padding: 1rem 1rem;
 }
 
-.main-nav .main__logo {
+.main-nav__ctn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem 1rem;
+  width: 100%;
+}
+
+.main-nav .main-nav__logo {
   width: 9rem;
   padding-bottom: 1rem;
 }
@@ -148,10 +164,7 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  width: 100%;
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
@@ -161,6 +174,20 @@ a {
   line-height: 1.375rem;
   font-weight: 400;
   color: #AFAFAF;
+}
+
+@media (min-width: 768px) {
+  .main-nav .main-nav__ctn {
+    height: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .main-nav .main-nav__logo {
+    padding-bottom: 0;
+  }
 }
 
 .hero {
@@ -204,6 +231,13 @@ a {
   z-index: 2;
   position: relative;
   padding: 0 1rem;
+}
+
+@media (min-width: 425px) {
+  .hero .hero__head {
+    font-size: 2rem;
+    line-height: 2.7rem;
+  }
 }
 
 .musicians__wrap {
@@ -263,7 +297,7 @@ a {
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-weight: 400;
-  line-height: 1.325rem;
+  line-height: 1.525rem;
   font-size: 0.9425rem;
   width: 96%;
 }
@@ -274,6 +308,12 @@ a {
 
 .musicians .bottom {
   margin-bottom: 2.5rem;
+}
+
+@media (min-width: 425px) {
+  .musicians .musicians__head {
+    font-size: 2rem;
+  }
 }
 
 .gallery {
@@ -373,7 +413,13 @@ a {
   background-repeat: no-repeat;
 }
 
-footer {
+@media (min-width: 425px) {
+  .gallery .gallery__head {
+    font-size: 2rem;
+  }
+}
+
+.intouch {
   width: 100vw;
   background-color: #323232;
   color: #ffffff;
@@ -381,7 +427,7 @@ footer {
   height: 54rem;
 }
 
-footer .footer-head {
+.footer-head {
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 900;
@@ -390,7 +436,7 @@ footer .footer-head {
   padding: 0 0 2rem 1rem;
 }
 
-footer .footer-wrap {
+.footer-wrap {
   padding: 0 1rem;
   width: 100%;
   display: -webkit-box;
@@ -402,43 +448,55 @@ footer .footer-wrap {
           flex-direction: column;
 }
 
-footer .footer-wrap .icon {
+.icon {
   color: #ffffff;
   height: 1.5rem;
   margin-right: 2rem;
   margin-bottom: 2.5rem;
 }
 
-footer .footer-wrap .footer-logo {
+.footer-logo {
   display: none;
 }
 
-footer .footer-wrap .contact-head {
+.contact-head {
   color: #ffffff;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5rem;
 }
 
-footer .footer-wrap .contact-item {
+.contact-item {
   color: #AFAFAF;
   width: 65%;
   line-height: 1.5rem;
   padding: 1.5rem 0 1.5rem 0;
 }
 
-footer .footer-wrap .contact-link {
+.contact-link {
   padding-bottom: 2.5rem;
 }
 
-footer .footer-wrap .contact-email {
+.contact-email {
   color: #AFAFAF;
   font-size: 0.8825rem;
 }
 
-footer .footer-wrap .copyright {
+.copyright {
   color: #AFAFAF;
   width: 86%;
   line-height: 1.5rem;
+}
+
+@media (min-width: 425px) {
+  .intouch {
+    height: 50rem;
+  }
+  .footer-head {
+    font-size: 3rem;
+  }
+  .contact-head {
+    font-size: 1.15rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */
