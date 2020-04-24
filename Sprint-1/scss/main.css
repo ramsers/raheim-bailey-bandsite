@@ -278,14 +278,22 @@ a {
   padding: 0 1rem;
 }
 
-.content .content-wrapper {
+.musicians__wrap {
   padding: 0 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .musicians__head {
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 900;
+  padding-left: 1rem;
   margin-top: 2rem;
 }
 
@@ -338,6 +346,10 @@ a {
 }
 
 .gallery {
+  background-color: #FAFAFA;
+}
+
+.gallery__wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -345,15 +357,17 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 1rem;
 }
 
 .gallery__head {
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 900;
+  padding-left: 1rem;
   padding-bottom: 1.5rem;
 }
 
@@ -426,5 +440,29 @@ a {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+}
+
+footer {
+  width: 100vw;
+  background-color: #323232;
+  color: #ffffff;
+}
+
+footer .footer-wrap {
+  padding: 0 1rem;
+  width: 100%;
+}
+
+footer .footer-wrap .footer-head {
+  color: #ffffff;
+}
+
+footer .footer-wrap .icons {
+  color: #ffffff;
+  width: 2rem;
+}
+
+footer .footer-wrap .footer-logo {
+  display: none;
 }
 /*# sourceMappingURL=main.css.map */

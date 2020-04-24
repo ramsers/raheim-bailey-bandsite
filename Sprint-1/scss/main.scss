@@ -42,14 +42,20 @@
 .content {
     // height: 100vh;
     .content-wrapper {
-        padding:  0 $mspaceXSmall;
+        // padding:  0 $mspaceXSmall;
     }
 }
 
 // Musician Styles
 .musicians{
+    &__wrap{
+        padding: 0 $mspaceXSmall;
+        display: flex;
+        flex-direction: column;
+    }
     &__head{
         @include header-2;
+        padding-left: $mspaceXSmall;
         margin-top: $mspaceMedium; 
     }
     &__img {
@@ -95,11 +101,16 @@
 // Gallery Styles
 
 .gallery {
+    background-color: $alabaster;
+    &__wrap{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    padding: 0 $mspaceXSmall;
+    }
     &__head{
         @include header-2;
+        padding-left: $mspaceXSmall;
         padding-bottom: $mspaceSmall;
     }
     &__img{
@@ -147,9 +158,26 @@
     }
 }
 
-       
+    // Footer   
 footer {
-    // height: 100vh;
+    width: 100vw;
+    background-color: $black;
+    color: $white;
+    .footer-wrap{
+        padding: 0 $mspaceXSmall;
+        width: 100%;
+        .footer-head {
+            color:$white;
+        }
+        .icons {
+            color: $white;
+            width: 2rem;
+            
+        }
+        .footer-logo {
+            display: none;
+        }
+    }
 }
 
 
