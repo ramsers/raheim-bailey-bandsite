@@ -347,6 +347,7 @@ a {
 
 .gallery {
   background-color: #FAFAFA;
+  margin-bottom: 2.5rem;
 }
 
 .gallery__wrap {
@@ -367,8 +368,7 @@ a {
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 900;
-  padding-left: 1rem;
-  padding-bottom: 1.5rem;
+  padding: 2rem 0 1.5rem 1rem;
 }
 
 .gallery__img {
@@ -446,23 +446,68 @@ footer {
   width: 100vw;
   background-color: #323232;
   color: #ffffff;
+  padding-top: 2.5rem;
+  height: 54rem;
+}
+
+footer .footer-head {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 900;
+  color: #ffffff;
+  font-size: 2rem;
+  padding: 0 0 2rem 1rem;
 }
 
 footer .footer-wrap {
   padding: 0 1rem;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-footer .footer-wrap .footer-head {
+footer .footer-wrap .icon {
   color: #ffffff;
-}
-
-footer .footer-wrap .icons {
-  color: #ffffff;
-  width: 2rem;
+  height: 1.5rem;
+  margin-right: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 footer .footer-wrap .footer-logo {
   display: none;
+}
+
+footer .footer-wrap .contact-head {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+
+footer .footer-wrap .contact-item {
+  color: #AFAFAF;
+  width: 65%;
+  line-height: 1.5rem;
+  padding: 1.5rem 0 1.5rem 0;
+}
+
+footer .footer-wrap .contact-link {
+  padding-bottom: 2.5rem;
+}
+
+footer .footer-wrap .contact-email {
+  color: #AFAFAF;
+  font-size: 0.8825rem;
+}
+
+footer .footer-wrap .copyright {
+  color: #AFAFAF;
+  width: 86%;
+  line-height: 1.5rem;
 }
 /*# sourceMappingURL=main.css.map */
