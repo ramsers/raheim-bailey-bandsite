@@ -184,9 +184,17 @@ a {
             align-items: center;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
+    padding: 1rem 1.5rem;
   }
   .main-nav .main-nav__logo {
     padding-bottom: 0;
+    margin-right: 1.5rem;
+  }
+  .main-nav .main-nav__list {
+    width: 40%;
+  }
+  .main-nav .main-nav__link {
+    font-size: 1.1rem;
   }
 }
 

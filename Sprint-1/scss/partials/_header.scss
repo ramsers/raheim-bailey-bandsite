@@ -44,10 +44,18 @@
                     height: 100%;
                     align-items: center;
                     flex-wrap: nowrap;
+                    padding: 1rem 1.5rem;
                     }
                     &__logo {
                         padding-bottom: 0;
-                    }    
+                        margin-right: $mspaceSmall;
+                    }
+                    &__list {
+                        width: 40%;
+                    } 
+                    &__link{
+                        font-size: 1.1rem;
+                    }   
                 }
             }
 }
