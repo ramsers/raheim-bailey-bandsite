@@ -88,7 +88,7 @@
 
 
 @mixin mobile-lg{
-    @media (min-width: $mobilelg-breakpoint) {
+    @media (min-width: $mobilelg-breakpoint) and (max-width: 767px) {
         @content;
     }
 }

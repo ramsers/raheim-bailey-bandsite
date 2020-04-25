@@ -241,10 +241,22 @@ a {
   padding: 0 1rem;
 }
 
-@media (min-width: 425px) {
+@media (min-width: 425px) and (max-width: 767px) {
   .hero .hero__head {
     font-size: 2rem;
     line-height: 2.7rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    height: 53vw;
+  }
+  .hero__head {
+    font-size: 4.5rem;
+    line-height: 5.5rem;
+    padding: 0 1.5rem;
+    width: 81%;
   }
 }
 
@@ -318,9 +330,16 @@ a {
   margin-bottom: 2.5rem;
 }
 
-@media (min-width: 425px) {
+@media (min-width: 425px) and (max-width: 767px) {
   .musicians .musicians__head {
     font-size: 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .musicians .musicians__head {
+    font-size: 3rem;
+    margin-top: 4rem;
   }
 }
 
@@ -421,7 +440,7 @@ a {
   background-repeat: no-repeat;
 }
 
-@media (min-width: 425px) {
+@media (min-width: 425px) and (max-width: 767px) {
   .gallery .gallery__head {
     font-size: 2rem;
   }
@@ -496,7 +515,7 @@ a {
   line-height: 1.5rem;
 }
 
-@media (min-width: 425px) {
+@media (min-width: 425px) and (max-width: 767px) {
   .intouch {
     height: 50rem;
   }
