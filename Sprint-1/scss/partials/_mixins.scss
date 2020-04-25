@@ -98,8 +98,8 @@
       @content;
     }
   }
-@mixin tablet-mid{
-    @media(min-width: $tablet-midpoint) and (max-width: 1023px) {
+@mixin desktop-small{
+    @media(min-width: $desktop-small-breakpoint) and (max-width: 1199px) {
         @content;
     }
 }  

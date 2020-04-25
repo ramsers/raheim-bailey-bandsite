@@ -45,19 +45,28 @@
                 line-height: 2.7rem;
             }
         }
-    }   
-}
-@include tablet {
-    .hero {
-        height: 53vw;
-            &__head{
-                font-size: 4.5rem;
-                line-height: 5.5rem;
-                padding: 0 1.5rem;
-                width: 81%;
+    }
+    @include tablet {
+        .hero {
+            height: 53vw;
+                &__head{
+                    font-size: 4.5rem;
+                    line-height: 5.5rem;
+                    padding: 0 1.5rem;
+                    width: 81%;
+                }
             }
         }
-    } 
+    @include desktop-small{
+        .hero{
+            &__head{
+                font-size: 5rem;
+                line-height: 6.5rem;
+                padding: 0 4rem;
+            }
+        }
+    }        
+}
 
 
 // Musician Styles

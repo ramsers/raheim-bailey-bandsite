@@ -198,6 +198,12 @@ a {
   }
 }
 
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .main-nav .main-nav__ctn {
+    padding: 1rem 4rem;
+  }
+}
+
 .hero {
   height: 58vw;
   width: 100vw;
@@ -249,14 +255,22 @@ a {
 }
 
 @media (min-width: 768px) {
-  .hero {
+  .hero .hero {
     height: 53vw;
   }
-  .hero__head {
+  .hero .hero__head {
     font-size: 4.5rem;
     line-height: 5.5rem;
     padding: 0 1.5rem;
     width: 81%;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .hero .hero__head {
+    font-size: 5rem;
+    line-height: 6.5rem;
+    padding: 0 4rem;
   }
 }
 

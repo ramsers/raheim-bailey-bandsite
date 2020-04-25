@@ -58,6 +58,13 @@
                     }   
                 }
             }
+        @include desktop-small {
+            .main-nav{
+                &__ctn{
+                    padding: 1rem 4rem;
+                }
+            }
+        }
 }
 
 
