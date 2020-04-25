@@ -501,7 +501,7 @@ a {
   }
   .gallery .gallery__img {
     min-width: 224px;
-    width: 10%;
+    width: 31%;
     height: 16.5vw;
     margin-bottom: 1.5rem;
   }
@@ -592,7 +592,7 @@ a {
 
 @media (min-width: 768px) {
   .intouch {
-    height: 30rem;
+    height: 28rem;
   }
   .footer-head {
     display: inline-block;

@@ -242,7 +242,7 @@
             }
             &__img{
                 min-width: 224px;
-                width: 10%;
+                width: 31%;
                 height: 16.5vw;
                 margin-bottom:1.5rem;
             }
@@ -319,7 +319,7 @@
 }
 @include tablet {
     .intouch{
-        height: 30rem;
+        height: 28rem;
     }
     .footer-head{
         display: inline-block;
