@@ -441,11 +441,14 @@ a {
     margin-bottom: 3rem;
   }
   .musicians .article-ctn {
-    width: 90%;
+    width: 85%;
     padding: 0 0 0 6rem;
   }
   .musicians .article-ctn .top {
     margin-right: 2.5rem;
+  }
+  .musicians .article-ctn .bottom {
+    margin: 0;
   }
 }
 
@@ -483,6 +486,9 @@ a {
   .musicians .article-ctn {
     width: 85%;
     padding: 0 0 0 9.5rem;
+  }
+  .musicians .bottom {
+    margin: 0 0 0 2.5rem;
   }
 }
 
@@ -780,18 +786,21 @@ a {
 
 @media (min-width: 1024px) and (max-width: 1199px) {
   .intouch .footer-head {
-    padding: 0 4rem 2rem 2.5rem;
+    padding: 0 1rem 2rem 2.5rem;
   }
   .intouch .social-icons {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
-  .intouch .social-icons .icon {
-    margin-right: 2.5rem;
+  .intouch .social-icons .social-ctn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 5rem;
   }
-  .intouch .footer-logo {
-    left: 21rem;
+  .intouch .social-icons .social-ctn .icon {
+    margin-right: 2rem;
   }
   .intouch .footer-wrap {
     padding: 1.5rem 1rem 0 2.5rem;
@@ -801,6 +810,35 @@ a {
   }
   .intouch .copyright {
     padding: 0 2.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .intouch .footer-head {
+    padding: 0 0 2rem 4.5rem;
+  }
+  .intouch .footer-wrap {
+    padding: 1.5rem 1rem 0 4.5rem;
+  }
+  .intouch .footer-wrap .contact-item {
+    width: 200px !important;
+  }
+  .intouch .social-icons {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .intouch .social-icons .social-ctn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 5rem;
+  }
+  .intouch .social-icons .social-ctn .icon {
+    margin-right: 2rem;
+  }
+  .intouch .copyright {
+    padding: 0 4.5rem;
   }
 }
 /*# sourceMappingURL=main.css.map */

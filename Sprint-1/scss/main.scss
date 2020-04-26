@@ -203,10 +203,13 @@
             margin-bottom: 3rem;
         }
         .article-ctn {
-            width: 90%;
+            width: 85%;
             padding: 0 0 0 6rem;
             .top {
                 margin-right: 2.5rem;
+            }
+            .bottom {
+                margin: 0;
             }
         }
     }
@@ -239,6 +242,9 @@
         .article-ctn {
             width: 85%;
             padding: 0 0 0 9.5rem;
+        }
+        .bottom {
+            margin: 0 0 0 2.5rem;
         }
     }        
 }
@@ -471,17 +477,21 @@
     }
     @include desktop-small {
         .footer-head {
-            padding: 0 4rem 2rem 2.5rem;
+            padding: 0 1rem 2rem 2.5rem;
         }
-        .social-icons {
-            justify-content: flex-start;
-            .icon {
-                margin-right: 2.5rem;
+        .social-icons{
+            justify-content: space-between;
+            .social-ctn {
+                display: flex;
+                margin-left: 5rem;
+                .icon {
+                    margin-right: 2rem;
+                }
             }
         }
-        .footer-logo {
-            left: 21rem;
-        }
+        // .footer-logo {
+        //     left: 21rem;
+        // }
         .footer-wrap {
             padding: 1.5rem 1rem 0 2.5rem;
             .contact-item {
@@ -491,6 +501,30 @@
        .copyright{
            padding: 0 2.5rem;
        } 
+    }
+    @include desktop-lg {
+        .footer-head {
+            padding: 0 0 2rem 4.5rem;
+        }
+        .footer-wrap{
+            padding: 1.5rem 1rem 0 4.5rem;
+            .contact-item {
+                width: 200px !important;
+            }
+        }
+        .social-icons{
+            justify-content: space-between;
+            .social-ctn {
+                display: flex;
+                margin-left: 5rem;
+                .icon {
+                    margin-right: 2rem;
+                }
+            }
+        }
+        .copyright{
+            padding: 0 4.5rem;
+        } 
     }
 }
 
