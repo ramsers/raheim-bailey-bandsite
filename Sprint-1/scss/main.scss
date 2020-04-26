@@ -440,23 +440,24 @@
         .footer-head{
             display: inline-block;
             font-size: 2.5rem;
-            padding: 0 0 2rem 1.5rem;
+            padding: 0 0.5rem 2rem 1.5rem;
         }
         .social-icons{
             display: inline-flex;
             flex-direction: row;
             align-items: baseline;
             width: 60%;
-            justify-content: space-evenly;
-            .icon{
-                margin-right: 0;
-                padding: 0;
+            justify-content: space-between;
+            .social-ctn {
+                display: flex;
+                margin-left: 1rem; 
+                .icon{
+                    margin-right: 0;
+                }
             }
         }
         .footer-logo {
             display: flex;
-            position: relative;
-            left: 4rem;
         }
         .footer-wrap{
             display: flex;
@@ -464,15 +465,18 @@
             justify-content: space-between;
             padding: 2rem 1rem 0 1.5rem;
             .contact-head {
-                font-size:1.2rem;
+                font-size:1rem;
             }
             .contact-item {
-                width: 185px;
+                width: 200px;
             }
             .contact-list {
                 width: 32%;
                 margin-right: -15px;
             }
+        }
+        .copyright {
+            padding: 0 1.5rem;
         }  
     }
     @include desktop-small {

@@ -730,7 +730,7 @@ a {
   .intouch .footer-head {
     display: inline-block;
     font-size: 2.5rem;
-    padding: 0 0 2rem 1.5rem;
+    padding: 0 0.5rem 2rem 1.5rem;
   }
   .intouch .social-icons {
     display: -webkit-inline-box;
@@ -744,20 +744,23 @@ a {
         -ms-flex-align: baseline;
             align-items: baseline;
     width: 60%;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
-  .intouch .social-icons .icon {
+  .intouch .social-icons .social-ctn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 1rem;
+  }
+  .intouch .social-icons .social-ctn .icon {
     margin-right: 0;
-    padding: 0;
   }
   .intouch .footer-logo {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    position: relative;
-    left: 4rem;
   }
   .intouch .footer-wrap {
     display: -webkit-box;
@@ -773,14 +776,17 @@ a {
     padding: 2rem 1rem 0 1.5rem;
   }
   .intouch .footer-wrap .contact-head {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   .intouch .footer-wrap .contact-item {
-    width: 185px;
+    width: 200px;
   }
   .intouch .footer-wrap .contact-list {
     width: 32%;
     margin-right: -15px;
+  }
+  .intouch .copyright {
+    padding: 0 1.5rem;
   }
 }
 
