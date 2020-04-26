@@ -109,3 +109,8 @@
       @content;
     }
   }
+  @mixin desktop-lg {
+    @media (min-width: $desktop-lg-breakpoint) {
+      @content;
+    }
+  }

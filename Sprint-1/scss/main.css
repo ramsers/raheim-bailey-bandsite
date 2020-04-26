@@ -204,6 +204,15 @@ a {
   }
 }
 
+@media (min-width: 1200px) {
+  .main-nav .main-nav__ctn {
+    padding: 1rem 5.5rem;
+  }
+  .main-nav .main-nav__list {
+    width: 32%;
+  }
+}
+
 .hero {
   height: 58vw;
   width: 100vw;
