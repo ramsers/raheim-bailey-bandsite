@@ -375,7 +375,7 @@
     width: 100vw;
     background-color: $black;
     color: $white;
-    padding-top: $mspaceLarge;
+    padding-top: 3.5rem;
     padding-bottom: 3rem; 
     .footer-head {
         @include header-2;
@@ -446,7 +446,7 @@
             display: inline-flex;
             flex-direction: row;
             align-items: baseline;
-            width: 60%;
+            width: 62%;
             justify-content: space-between;
             .social-ctn {
                 display: flex;
@@ -483,13 +483,17 @@
         .footer-head {
             padding: 0 1rem 2rem 2.5rem;
         }
+        .contact-head {
+            font-size: 1.2rem !important;
+        }
         .social-icons{
             justify-content: space-between;
+            width: 68%;
             .social-ctn {
                 display: flex;
-                margin-left: 5rem;
+                margin-left: 1rem;
                 .icon {
-                    margin-right: 2rem;
+                    margin-right: 0;
                 }
             }
         }
@@ -512,17 +516,21 @@
         }
         .footer-wrap{
             padding: 1.5rem 1rem 0 4.5rem;
+            .contact-head {
+                font-size: 1.2rem;
+            }
             .contact-item {
                 width: 200px !important;
             }
         }
         .social-icons{
             justify-content: space-between;
+            width: 69%;
             .social-ctn {
                 display: flex;
                 margin-left: 5rem;
                 .icon {
-                    margin-right: 2rem;
+                    margin-right: 0;
                 }
             }
         }

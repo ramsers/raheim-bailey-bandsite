@@ -650,7 +650,7 @@ a {
   width: 100vw;
   background-color: #323232;
   color: #ffffff;
-  padding-top: 2.5rem;
+  padding-top: 3.5rem;
   padding-bottom: 3rem;
 }
 
@@ -743,7 +743,7 @@ a {
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
-    width: 60%;
+    width: 62%;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -794,19 +794,23 @@ a {
   .intouch .footer-head {
     padding: 0 1rem 2rem 2.5rem;
   }
+  .intouch .contact-head {
+    font-size: 1.2rem !important;
+  }
   .intouch .social-icons {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    width: 68%;
   }
   .intouch .social-icons .social-ctn {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-left: 5rem;
+    margin-left: 1rem;
   }
   .intouch .social-icons .social-ctn .icon {
-    margin-right: 2rem;
+    margin-right: 0;
   }
   .intouch .footer-wrap {
     padding: 1.5rem 1rem 0 2.5rem;
@@ -826,6 +830,9 @@ a {
   .intouch .footer-wrap {
     padding: 1.5rem 1rem 0 4.5rem;
   }
+  .intouch .footer-wrap .contact-head {
+    font-size: 1.2rem;
+  }
   .intouch .footer-wrap .contact-item {
     width: 200px !important;
   }
@@ -833,6 +840,7 @@ a {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    width: 69%;
   }
   .intouch .social-icons .social-ctn {
     display: -webkit-box;
@@ -841,7 +849,7 @@ a {
     margin-left: 5rem;
   }
   .intouch .social-icons .social-ctn .icon {
-    margin-right: 2rem;
+    margin-right: 0;
   }
   .intouch .copyright {
     padding: 0 4.5rem;
