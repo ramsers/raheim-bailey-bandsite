@@ -206,7 +206,7 @@ a {
 
 @media (min-width: 1200px) {
   .main-nav .main-nav__ctn {
-    padding: 1rem 5.5rem;
+    padding: 1rem 4.5rem;
   }
   .main-nav .main-nav__list {
     width: 32%;
@@ -285,7 +285,7 @@ a {
 
 @media (min-width: 1200px) {
   .hero .hero__head {
-    padding: 0 5.5rem;
+    padding: 0 4.5rem;
     width: 62%;
   }
 }
@@ -446,6 +446,43 @@ a {
   }
   .musicians .article-ctn .top {
     margin-right: 2.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .musicians .musicians__head {
+    padding-left: 4.5rem;
+  }
+  .musicians .musicians__img-ctn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .musicians .musicians__img {
+    width: 75%;
+    height: 45vw;
+  }
+  .musicians .musicians__quote {
+    width: 90%;
+    padding-left: 9.5rem;
+  }
+  .musicians .musicians__head-2 {
+    padding: 0 0 3rem 9.5rem;
+  }
+  .musicians .author {
+    padding-left: 9.5rem;
+    margin-bottom: 3rem;
+  }
+  .musicians .article-ctn {
+    width: 90%;
+    padding: 0 0 0 9.5rem;
   }
 }
 
