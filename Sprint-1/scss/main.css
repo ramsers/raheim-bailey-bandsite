@@ -481,7 +481,7 @@ a {
     margin-bottom: 3rem;
   }
   .musicians .article-ctn {
-    width: 90%;
+    width: 85%;
     padding: 0 0 0 9.5rem;
   }
 }
@@ -625,6 +625,18 @@ a {
     width: 32%;
     height: 17.5vw;
     margin-bottom: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .gallery .gallery__head {
+    padding: 4rem 0 4rem 4.5rem;
+  }
+  .gallery .gallery__wrap {
+    padding: 0 4.5rem;
+  }
+  .gallery .gallery__img {
+    width: 32%;
   }
 }
 

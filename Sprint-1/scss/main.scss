@@ -237,7 +237,7 @@
             margin-bottom: 3rem;
         }
         .article-ctn {
-            width: 90%;
+            width: 85%;
             padding: 0 0 0 9.5rem;
         }
     }        
@@ -342,6 +342,19 @@
                 width: 32%;
                 height: 17.5vw;
                 margin-bottom: 1rem;
+            }
+        }
+    }
+    @include desktop-lg{
+        .gallery{
+            &__head{
+                padding: 4rem 0 4rem 4.5rem; 
+            }
+            &__wrap {
+                padding: 0 4.5rem;
+            }
+            &__img {
+                width: 32%;
             }
         }
     }
