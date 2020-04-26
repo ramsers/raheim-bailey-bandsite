@@ -40,6 +40,7 @@
 body {
   line-height: 1;
   font-family: "Roboto";
+  overflow-x: hidden;
 }
 
 ol, ul, li {
@@ -97,6 +98,7 @@ a {
 body {
   line-height: 1;
   font-family: "Roboto";
+  overflow-x: hidden;
 }
 
 ol, ul, li {
@@ -176,6 +178,13 @@ a {
   color: #AFAFAF;
 }
 
+.main-nav__link--active {
+  border-bottom: 6px solid #fff;
+  color: #fff;
+  padding-bottom: 13px;
+  font-weight: 400;
+}
+
 @media (min-width: 768px) {
   .main-nav .main-nav__ctn {
     height: 100%;
@@ -195,6 +204,9 @@ a {
   }
   .main-nav .main-nav__link {
     font-size: 1.1rem;
+  }
+  .main-nav .main-nav__link--active {
+    padding-bottom: 35px;
   }
 }
 
@@ -240,6 +252,12 @@ a {
   position: absolute;
   top: 6.4rem;
   z-index: 1;
+  -webkit-transition: opacity .4s ease-in-out;
+  transition: opacity .4s ease-in-out;
+}
+
+.hero__ctn:hover {
+  opacity: 30%;
 }
 
 .hero__head {
@@ -286,7 +304,7 @@ a {
 @media (min-width: 1200px) {
   .hero .hero__head {
     padding: 0 4.5rem;
-    width: 62%;
+    width: 59%;
   }
 }
 
@@ -631,6 +649,12 @@ a {
     width: 32%;
     height: 17.5vw;
     margin-bottom: 1rem;
+    opacity: .5;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+  }
+  .gallery .gallery__img__hover {
+    opacity: 1;
   }
 }
 
@@ -643,6 +667,12 @@ a {
   }
   .gallery .gallery__img {
     width: 32%;
+    opacity: .5;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+  }
+  .gallery .gallery__img:hover {
+    opacity: 1;
   }
 }
 
@@ -814,6 +844,10 @@ a {
   }
   .intouch .footer-wrap {
     padding: 1.5rem 1rem 0 2.5rem;
+    width: 90%;
+  }
+  .intouch .footer-wrap .contact-list {
+    width: 31%;
   }
   .intouch .footer-wrap .contact-item {
     width: 200px !important;
@@ -829,9 +863,13 @@ a {
   }
   .intouch .footer-wrap {
     padding: 1.5rem 1rem 0 4.5rem;
+    width: 90%;
   }
   .intouch .footer-wrap .contact-head {
     font-size: 1.2rem;
+  }
+  .intouch .footer-wrap .contact-list {
+    width: 31%;
   }
   .intouch .footer-wrap .contact-item {
     width: 200px !important;

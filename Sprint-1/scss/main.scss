@@ -26,6 +26,10 @@
         position: absolute;
         top: 6.4rem;
         z-index: 1;
+        transition: opacity .4s ease-in-out;
+        &:hover{
+            opacity: 30%;
+        }
     }
     &__head {
         @include header-2;
@@ -70,7 +74,7 @@
         .hero{
             &__head {
                 padding: 0 4.5rem;
-                width: 62%;            
+                width: 59%;            
             }
         }
     }       
@@ -348,6 +352,11 @@
                 width: 32%;
                 height: 17.5vw;
                 margin-bottom: 1rem;
+                opacity: .5;
+                transition: all .3s ease-in-out;
+                &__hover{
+                    opacity: 1;
+                }
             }
         }
     }
@@ -361,6 +370,11 @@
             }
             &__img {
                 width: 32%;
+                opacity: .5;
+                transition: all .4s ease-in-out;
+                &:hover{
+                    opacity: 1;
+                }
             }
         }
     }
@@ -502,6 +516,10 @@
         // }
         .footer-wrap {
             padding: 1.5rem 1rem 0 2.5rem;
+            width: 90%;
+            .contact-list {
+                width: 31%;
+            }
             .contact-item {
                 width: 200px !important;
             }
@@ -516,8 +534,12 @@
         }
         .footer-wrap{
             padding: 1.5rem 1rem 0 4.5rem;
+            width: 90%;
             .contact-head {
                 font-size: 1.2rem;
+            }
+            .contact-list {
+                width: 31%;
             }
             .contact-item {
                 width: 200px !important;
