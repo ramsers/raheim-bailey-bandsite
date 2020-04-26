@@ -283,6 +283,13 @@ a {
   }
 }
 
+@media (min-width: 1200px) {
+  .hero .hero__head {
+    padding: 0 5.5rem;
+    width: 62%;
+  }
+}
+
 .musicians__wrap {
   padding: 0 1rem;
   display: -webkit-box;
