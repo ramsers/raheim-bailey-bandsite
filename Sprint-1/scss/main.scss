@@ -62,7 +62,7 @@
             &__head{
                 font-size: 5rem;
                 line-height: 6.5rem;
-                padding: 0 4rem;
+                padding: 0 3rem;
             }
         }
     }        
@@ -168,6 +168,40 @@
             margin: 0 1.5rem;
         }
     }
+    @include desktop-small{
+        .musicians{
+            &__head{
+                padding: 0 3rem;
+            }
+            &__img-ctn{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+            &__img{
+                width: 80%;
+                height: 49vw;
+            }
+            &__quote {
+                width: 90%;
+                padding-left: 6rem;
+            }
+            &__head-2{
+                padding: 0 0 3rem 6rem;
+            }
+        }
+        .author {
+            padding-left: 6rem;
+            margin-bottom: 3rem;
+        }
+        .article-ctn {
+            width: 90%;
+            padding: 0 0 0 6rem;
+            .top {
+                margin-right: 2.5rem;
+            }
+        }
+    }        
 }
 
 // Gallery Styles
@@ -257,7 +291,26 @@
             }
         }
     }
+    @include desktop-small{
+        .gallery{
+            &__head {
+                padding: 4rem 0 4rem 3rem;
+            }
+            &__wrap {
+                padding: 0 2.5rem;
+            }
+            &__img {
+                width: 32%;
+                height: 17.5vw;
+                margin-bottom: 1rem;
+            }
+        }
+    }
 }
+
+
+
+
 
     // Footer   
 .intouch {
@@ -265,109 +318,132 @@
     background-color: $black;
     color: $white;
     padding-top: $mspaceLarge;
-    height: 54rem;   
-}
-.footer-head {
-    @include header-2;
-    color:$white;
-    font-size: 2rem;
-    padding: 0 0 $mspaceMedium $mspaceXSmall;
-}
-.footer-wrap{
-    padding: 0 $mspaceXSmall;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    // align-items: flex-start;
-}
-.icon {
-    color: $white;
-    height: $mHeaderSize;
-    margin-right: $mspaceMedium;
-    margin-bottom: $mspaceLarge;
-    padding: 0 1rem;
-}
-.footer-logo {
-    display: none;
-}
-.contact-head{
-    color: $white;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: $subHeaderHeight;
-}
-.contact-item{
-    color: $silver;
-    width: 65%;
-    line-height: $subHeaderHeight;
-    padding: $mspaceSmall 0 $mspaceSmall 0;
-}
-.contact-link{
-    padding-bottom: $mspaceLarge;
-}
-.contact-email{
-    color: $silver;
-    font-size: $mContactSize + .07rem;
-}
-.copyright {
-    color: $silver;
-    width: 86%;
-    line-height: $subHeaderHeight;
-    padding: 0 1rem;
-}
-@include mobile-lg {
-    .intouch {
-        height: 55rem;
-    }
-    .footer-head{
-        font-size: 3rem;
-    }
-    .contact-head {
-        font-size: 1.15rem;
-    }
-}
-@include tablet {
-    .intouch{
-        height: 28rem;
-    }
-    .footer-head{
-        display: inline-block;
-        font-size: 2.5rem;
-        padding: 0 0 2rem 1.5rem;
-    }
-    .social-icons{
-        display: inline-flex;
-        flex-direction: row;
-        align-items: baseline;
-        width: 60%;
-        justify-content: space-evenly;
-        .icon{
-            margin-right: 0;
-            padding: 0;
-        }
-    }
-    .footer-logo {
-        display: flex;
-        position: relative;
-        left: 4rem;
+    padding-bottom: 3rem; 
+    .footer-head {
+        @include header-2;
+        color:$white;
+        font-size: 2rem;
+        padding: 0 0 $mspaceMedium $mspaceXSmall;
     }
     .footer-wrap{
+        padding: 0 $mspaceXSmall;
+        width: 100%;
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 2rem 1rem 0 1.5rem;
+        flex-direction: column;
+        // align-items: flex-start;
+    }
+    .icon {
+        color: $white;
+        height: $mHeaderSize;
+        margin-right: $mspaceMedium;
+        margin-bottom: $mspaceLarge;
+        padding: 0 1rem;
+    }
+    .footer-logo {
+        display: none;
+    }
+    .contact-head{
+        color: $white;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: $subHeaderHeight;
+    }
+    .contact-item{
+        color: $silver;
+        width: 65%;
+        line-height: $subHeaderHeight;
+        padding: $mspaceSmall 0 $mspaceSmall 0;
+    }
+    .contact-link{
+        padding-bottom: $mspaceLarge;
+    }
+    .contact-email{
+        color: $silver;
+        font-size: $mContactSize + .07rem;
+    }
+    .copyright {
+        color: $silver;
+        width: 86%;
+        line-height: $subHeaderHeight;
+        padding: 0 1rem;
+    }
+    @include mobile-lg {
+        // .intouch {
+        //     height: 55rem;
+        // }
+        .footer-head{
+            font-size: 3rem;
+        }
         .contact-head {
-            font-size:1.2rem;
-        }
-        .contact-item {
-            width: 185px;
-        }
-        .contact-list {
-            width: 33%;
-            margin-right: -15px;
+            font-size: 1.15rem;
         }
     }
+    @include tablet {
+        .footer-head{
+            display: inline-block;
+            font-size: 2.5rem;
+            padding: 0 0 2rem 1.5rem;
+        }
+        .social-icons{
+            display: inline-flex;
+            flex-direction: row;
+            align-items: baseline;
+            width: 60%;
+            justify-content: space-evenly;
+            .icon{
+                margin-right: 0;
+                padding: 0;
+            }
+        }
+        .footer-logo {
+            display: flex;
+            position: relative;
+            left: 4rem;
+        }
+        .footer-wrap{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 2rem 1rem 0 1.5rem;
+            .contact-head {
+                font-size:1.2rem;
+            }
+            .contact-item {
+                width: 185px;
+            }
+            .contact-list {
+                width: 32%;
+                margin-right: -15px;
+            }
+        }  
+    }
+    @include desktop-small {
+        .footer-head {
+            padding: 0 4rem 2rem 2.5rem;
+        }
+        .social-icons {
+            justify-content: flex-start;
+            .icon {
+                margin-right: 2.5rem;
+            }
+        }
+        .footer-logo {
+            left: 21rem;
+        }
+        .footer-wrap {
+            padding: 1.5rem 1rem 0 2.5rem;
+            .contact-item {
+                width: 200px !important;
+            }
+        }
+       .copyright{
+           padding: 0 2.5rem;
+       } 
+    }
 }
+
+
+
 
 
 

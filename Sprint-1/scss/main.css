@@ -200,7 +200,7 @@ a {
 
 @media (min-width: 1024px) and (max-width: 1199px) {
   .main-nav .main-nav__ctn {
-    padding: 1rem 4rem;
+    padding: 1rem 3rem;
   }
 }
 
@@ -270,7 +270,7 @@ a {
   .hero .hero__head {
     font-size: 5rem;
     line-height: 6.5rem;
-    padding: 0 4rem;
+    padding: 0 3rem;
   }
 }
 
@@ -390,6 +390,46 @@ a {
   }
   .musicians .bottom {
     margin: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .musicians .musicians__head {
+    padding: 0 3rem;
+  }
+  .musicians .musicians__img-ctn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .musicians .musicians__img {
+    width: 80%;
+    height: 49vw;
+  }
+  .musicians .musicians__quote {
+    width: 90%;
+    padding-left: 6rem;
+  }
+  .musicians .musicians__head-2 {
+    padding: 0 0 3rem 6rem;
+  }
+  .musicians .author {
+    padding-left: 6rem;
+    margin-bottom: 3rem;
+  }
+  .musicians .article-ctn {
+    width: 90%;
+    padding: 0 0 0 6rem;
+  }
+  .musicians .article-ctn .top {
+    margin-right: 2.5rem;
   }
 }
 
@@ -521,15 +561,29 @@ a {
   }
 }
 
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .gallery .gallery__head {
+    padding: 4rem 0 4rem 3rem;
+  }
+  .gallery .gallery__wrap {
+    padding: 0 2.5rem;
+  }
+  .gallery .gallery__img {
+    width: 32%;
+    height: 17.5vw;
+    margin-bottom: 1rem;
+  }
+}
+
 .intouch {
   width: 100vw;
   background-color: #323232;
   color: #ffffff;
   padding-top: 2.5rem;
-  height: 54rem;
+  padding-bottom: 3rem;
 }
 
-.footer-head {
+.intouch .footer-head {
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 900;
@@ -538,7 +592,7 @@ a {
   padding: 0 0 2rem 1rem;
 }
 
-.footer-wrap {
+.intouch .footer-wrap {
   padding: 0 1rem;
   width: 100%;
   display: -webkit-box;
@@ -550,7 +604,7 @@ a {
           flex-direction: column;
 }
 
-.icon {
+.intouch .icon {
   color: #ffffff;
   height: 1.5rem;
   margin-right: 2rem;
@@ -558,34 +612,34 @@ a {
   padding: 0 1rem;
 }
 
-.footer-logo {
+.intouch .footer-logo {
   display: none;
 }
 
-.contact-head {
+.intouch .contact-head {
   color: #ffffff;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5rem;
 }
 
-.contact-item {
+.intouch .contact-item {
   color: #AFAFAF;
   width: 65%;
   line-height: 1.5rem;
   padding: 1.5rem 0 1.5rem 0;
 }
 
-.contact-link {
+.intouch .contact-link {
   padding-bottom: 2.5rem;
 }
 
-.contact-email {
+.intouch .contact-email {
   color: #AFAFAF;
   font-size: 0.8825rem;
 }
 
-.copyright {
+.intouch .copyright {
   color: #AFAFAF;
   width: 86%;
   line-height: 1.5rem;
@@ -593,27 +647,21 @@ a {
 }
 
 @media (min-width: 425px) and (max-width: 767px) {
-  .intouch {
-    height: 55rem;
-  }
-  .footer-head {
+  .intouch .footer-head {
     font-size: 3rem;
   }
-  .contact-head {
+  .intouch .contact-head {
     font-size: 1.15rem;
   }
 }
 
 @media (min-width: 768px) {
-  .intouch {
-    height: 28rem;
-  }
-  .footer-head {
+  .intouch .footer-head {
     display: inline-block;
     font-size: 2.5rem;
     padding: 0 0 2rem 1.5rem;
   }
-  .social-icons {
+  .intouch .social-icons {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
@@ -629,18 +677,18 @@ a {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
   }
-  .social-icons .icon {
+  .intouch .social-icons .icon {
     margin-right: 0;
     padding: 0;
   }
-  .footer-logo {
+  .intouch .footer-logo {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     position: relative;
     left: 4rem;
   }
-  .footer-wrap {
+  .intouch .footer-wrap {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -653,15 +701,41 @@ a {
             justify-content: space-between;
     padding: 2rem 1rem 0 1.5rem;
   }
-  .footer-wrap .contact-head {
+  .intouch .footer-wrap .contact-head {
     font-size: 1.2rem;
   }
-  .footer-wrap .contact-item {
+  .intouch .footer-wrap .contact-item {
     width: 185px;
   }
-  .footer-wrap .contact-list {
-    width: 33%;
+  .intouch .footer-wrap .contact-list {
+    width: 32%;
     margin-right: -15px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .intouch .footer-head {
+    padding: 0 4rem 2rem 2.5rem;
+  }
+  .intouch .social-icons {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .intouch .social-icons .icon {
+    margin-right: 2.5rem;
+  }
+  .intouch .footer-logo {
+    left: 21rem;
+  }
+  .intouch .footer-wrap {
+    padding: 1.5rem 1rem 0 2.5rem;
+  }
+  .intouch .footer-wrap .contact-item {
+    width: 200px !important;
+  }
+  .intouch .copyright {
+    padding: 0 2.5rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
