@@ -18,13 +18,13 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        padding: 1rem 1rem;
+        padding: $spaceXSmall $spaceXSmall;
         width: 100%;
     }
     .main-nav{
         &__logo {
             width: 9rem;
-            padding-bottom: 1rem;
+            padding-bottom: $spaceXSmall;
         }
     }
         &__navbar {
@@ -37,9 +37,13 @@
         }
         &__link {
             @include navLink;
+            transition: color .3s ease-in-out;
+            &:hover{
+                color: $white;
+            }
             &--active{
-                border-bottom: 6px solid #fff;
-                color: #fff;
+                border-bottom: 6px solid $white;
+                color: $white;
                 padding-bottom: 13px;
                 font-weight: 400;
             }
@@ -50,11 +54,11 @@
                     height: 100%;
                     align-items: center;
                     flex-wrap: nowrap;
-                    padding: 1rem 1.5rem;
+                    padding: $spaceXSmall $spaceSmall;
                     }
                     &__logo {
                         padding-bottom: 0;
-                        margin-right: $mspaceSmall;
+                        margin-right: $spaceSmall;
                     }
                     &__list {
                         width: 40%;
@@ -70,14 +74,14 @@
         @include desktop-small {
             .main-nav{
                 &__ctn{
-                    padding: 1rem 3rem;
+                    padding: $spaceXSmall $spaceLarger;
                 }
             }
         }
         @include desktop-lg{
             .main-nav{
                 &__ctn{
-                    padding: 1rem 4.5rem;
+                    padding: $spaceXSmall 4.5rem;
                 }
                 &__list {
                     width: 32%;
@@ -87,25 +91,5 @@
         }
 }
 
-// .link-hover::after{
-//     content: '';
-//     display: block;
-//     width: 0;
-//     margin: .01rem 0 0 0;
-//     height: 2px;
-//     background-color: #fff;
-//     transition: width .3s;
-// }
 
-// .link-hover:hover::after {
-//     width: 100%;
-//     transition: width .3s;
-// }
-
-// .main-nav__link--active{
-//     border-bottom: 6px solid #fff;
-//     color: #fff;
-//     padding-bottom: 13px;
-//     font-weight: 400;
-// }
 

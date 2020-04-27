@@ -10,6 +10,12 @@
     font-weight: $heroFontWeight;
 }
 
+@mixin heroHead-d {
+    font-size: $heroHead-d;
+    line-height: $heroHeadHeight-d;
+    font-weight: $heroHeadWeight-d;
+}
+
 @mixin header {
     font-size:$header;
     line-height: $headerLineHeight;

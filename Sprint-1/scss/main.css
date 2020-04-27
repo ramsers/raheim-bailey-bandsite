@@ -176,11 +176,17 @@ a {
   line-height: 1.375rem;
   font-weight: 400;
   color: #AFAFAF;
+  -webkit-transition: color .3s ease-in-out;
+  transition: color .3s ease-in-out;
+}
+
+.main-nav__link:hover {
+  color: #ffffff;
 }
 
 .main-nav__link--active {
-  border-bottom: 6px solid #fff;
-  color: #fff;
+  border-bottom: 6px solid #ffffff;
+  color: #ffffff;
   padding-bottom: 13px;
   font-weight: 400;
 }
@@ -262,10 +268,8 @@ a {
 
 .hero__head {
   font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 900;
-  font-size: 1.5rem;
   line-height: 2.1rem;
+  font-weight: 900;
   width: 69%;
   color: #ffffff;
   opacity: 1;
@@ -277,6 +281,8 @@ a {
 @media (min-width: 425px) and (max-width: 767px) {
   .hero .hero__head {
     font-size: 2rem;
+    line-height: 1.375rem;
+    font-weight: 900;
     line-height: 2.7rem;
   }
 }
@@ -288,6 +294,7 @@ a {
   .hero .hero__head {
     font-size: 4.5rem;
     line-height: 5.5rem;
+    font-weight: 900;
     padding: 0 1.5rem;
     width: 81%;
   }
@@ -297,14 +304,18 @@ a {
   .hero .hero__head {
     font-size: 5rem;
     line-height: 6.5rem;
+    font-weight: 900;
     padding: 0 3rem;
   }
 }
 
 @media (min-width: 1200px) {
   .hero .hero__head {
+    font-size: 5rem;
+    line-height: 6.5rem;
+    font-weight: 900;
     padding: 0 4.5rem;
-    width: 59%;
+    width: 65%;
   }
 }
 
@@ -321,7 +332,7 @@ a {
 
 .musicians__head {
   font-size: 1.5rem;
-  line-height: 2rem;
+  line-height: 2.1rem;
   font-weight: 900;
   padding-left: 1rem;
   margin-top: 2rem;
@@ -345,16 +356,16 @@ a {
 }
 
 .musicians__head-2 {
-  font-size: 0.875rem;
+  font-size: 1.1rem;
   line-height: 1.375rem;
   font-weight: 700;
-  font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
+  font-weight: 800;
   padding-bottom: 1.5rem;
 }
 
 .musicians .author {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 500;
   text-align: left;
   margin-bottom: 2.5rem;
@@ -362,11 +373,11 @@ a {
 }
 
 .musicians .article {
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
-  font-weight: 400;
+  font-size: 0.945rem;
   line-height: 1.525rem;
-  font-size: 0.9425rem;
+  font-weight: 400;
+  line-height: 1.725rem;
+  font-size: 0.945rem;
   width: 96%;
 }
 
@@ -452,7 +463,9 @@ a {
     padding-left: 6rem;
   }
   .musicians .musicians__head-2 {
+    font-size: 1.7rem;
     padding: 0 0 3rem 6rem;
+    font-weight: 800;
   }
   .musicians .author {
     padding-left: 6rem;
@@ -495,7 +508,9 @@ a {
     padding-left: 9.5rem;
   }
   .musicians .musicians__head-2 {
+    font-size: 1.7rem;
     padding: 0 0 3rem 9.5rem;
+    font-weight: 800;
   }
   .musicians .author {
     padding-left: 9.5rem;
@@ -531,7 +546,7 @@ a {
 
 .gallery__head {
   font-size: 1.5rem;
-  line-height: 2rem;
+  line-height: 2.1rem;
   font-weight: 900;
   padding: 2rem 0 1.5rem 1rem;
 }
@@ -540,7 +555,6 @@ a {
   width: 100%;
   min-width: 288px;
   height: 50vw;
-  background-color: blue;
   margin-bottom: 1rem;
 }
 
@@ -681,12 +695,12 @@ a {
   background-color: #323232;
   color: #ffffff;
   padding-top: 3.5rem;
-  padding-bottom: 3rem;
+  padding-bottom: 2.5rem;
 }
 
 .intouch .footer-head {
   font-size: 1.5rem;
-  line-height: 2rem;
+  line-height: 2.1rem;
   font-weight: 900;
   color: #ffffff;
   font-size: 2rem;
@@ -708,7 +722,7 @@ a {
 .intouch .icon {
   color: #ffffff;
   height: 1.5rem;
-  margin-right: 2rem;
+  margin-right: 1rem;
   margin-bottom: 2.5rem;
   padding: 0 1rem;
 }
@@ -720,7 +734,7 @@ a {
 .intouch .contact-head {
   color: #ffffff;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.5rem;
 }
 
@@ -737,7 +751,7 @@ a {
 
 .intouch .contact-email {
   color: #AFAFAF;
-  font-size: 0.8825rem;
+  font-size: 0.875rem;
 }
 
 .intouch .copyright {
@@ -753,6 +767,7 @@ a {
   }
   .intouch .contact-head {
     font-size: 1.15rem;
+    font-weight: 500;
   }
 }
 
@@ -826,6 +841,7 @@ a {
   }
   .intouch .contact-head {
     font-size: 1.2rem !important;
+    font-weight: 500;
   }
   .intouch .social-icons {
     -webkit-box-pack: justify;
@@ -841,6 +857,9 @@ a {
   }
   .intouch .social-icons .social-ctn .icon {
     margin-right: 0;
+  }
+  .intouch .footer-logo {
+    height: 1.3rem;
   }
   .intouch .footer-wrap {
     padding: 1.5rem 1rem 0 2.5rem;
@@ -860,6 +879,9 @@ a {
 @media (min-width: 1200px) {
   .intouch .footer-head {
     padding: 0 0 2rem 4.5rem;
+  }
+  .intouch .footer-logo {
+    height: 1.3rem;
   }
   .intouch .footer-wrap {
     padding: 1.5rem 1rem 0 4.5rem;

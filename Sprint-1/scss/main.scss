@@ -4,10 +4,9 @@
 @import "partials/mixins";
 @import "partials/header";
 
-// Hero Styles
+// Hero Section Styles
 
 .hero{
-    // padding: 0 16px;
     height: 58vw;
     width: 100vw;
     background-image: url('../assets/Images/Gaspard_Augé_and_Xavier_de_Rosnay_\(Justice\).jpg');
@@ -16,7 +15,6 @@
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
-    // align-items: center;
     justify-content: center;
     &__ctn{
         height: inherit;
@@ -33,19 +31,17 @@
     }
     &__head {
         @include header-2;
-        font-size: 1.5rem;
-        line-height: 2.1rem;
         width: 69%;
         color: $white;
         opacity: 1;
         z-index: 2;
         position: relative;
-        padding: 0 $mspaceXSmall;
+        padding: 0 $spaceXSmall;
     }
     @include mobile-lg {
         .hero{
             &__head{
-                font-size: 2rem;
+                @include secondHead;
                 line-height: 2.7rem;
             }
         }
@@ -54,9 +50,8 @@
         .hero {
             height: 53vw;
                 &__head{
-                    font-size: 4.5rem;
-                    line-height: 5.5rem;
-                    padding: 0 1.5rem;
+                    @include heroHead;
+                    padding: 0 $spaceSmall;
                     width: 81%;
                 }
             }
@@ -64,126 +59,125 @@
     @include desktop-small{
         .hero{
             &__head{
-                font-size: 5rem;
-                line-height: 6.5rem;
-                padding: 0 3rem;
+                @include heroHead-d;
+                padding: 0 $spaceLarger;
             }
         }
     } 
     @include desktop-lg{
         .hero{
             &__head {
+                @include heroHead-d;
                 padding: 0 4.5rem;
-                width: 59%;            
+                width: 65%;            
             }
         }
     }       
 }
 
 
-// Musician Styles
+// Musician Section Styles
 .musicians{
     &__wrap{
-        padding: 0 $mspaceXSmall;
+        padding: 0 $spaceXSmall;
         display: flex;
         flex-direction: column;
     }
     &__head{
         @include header-2;
-        padding-left: $mspaceXSmall;
-        margin-top: $mspaceMedium; 
+        padding-left: $spaceXSmall;
+        margin-top: $spaceMedium; 
     }
     &__img {
-        padding-top: $mspaceMedium;
+        padding-top: $spaceMedium;
         width: 100%;
         height:69vw;
-        padding-bottom: $mspaceSmall;
+        padding-bottom: $spaceSmall;
     }
     &__quote {
-        // @include subHead-2; 
         font-size: 1.15rem;
         line-height: 1.9rem;
         font-family: "Roboto";
         font-weight: 500;
         text-align: left;
-        padding-bottom: $mspaceSmall;
+        padding-bottom: $spaceSmall;
         width: 93%;
     }
     &__head-2{
         @include subHead-2;
-        font-weight: 500;
-        font-size: 1.1rem;
-        padding-bottom: $mspaceSmall;
+        font-size: 1.05rem;
+        font-weight: 800;
+        padding-bottom: $spaceSmall;
     }
     .author{
-        font-size: 1.1rem;
+        font-size: 1rem;
         font-weight: 500;
         text-align: left;
-        margin-bottom: $mspaceLarge;
+        margin-bottom: $spaceLarge;
         display: inline-block;
     }
     .article {
         @include textContent-2;
-        line-height: 1.525rem;
-        font-size: $mParagraphSize + .13rem;
+        line-height: 1.725rem;
+        font-size: $paragraphSize;
         width: 96%;
     }
     .top {
-        margin-bottom: $mspaceSmall;
+        margin-bottom: $spaceSmall;
     }
     .bottom {
-        margin-bottom: $mspaceLarge;
+        margin-bottom: $spaceLarge;
     }
     @include mobile-lg {
         .musicians{
             &__head{
-                font-size: 2rem;
+                font-size: $sHeader;
             }
         }
     }
     @include tablet {
         .musicians{
             &__head{
-                font-size: 3rem;
+                font-size: $header;
                 margin-top: 4rem;
-                padding-left: 1.5rem;
+                padding-left: $spaceSmall;
             }
             &__img{
                 height: 58vw;
-                padding-top: 3rem;
-                padding-bottom: 2.5rem;
+                padding-top: $spaceLarger;
+                padding-bottom: $spaceLarge;
             }
             &__wrap{
-                padding: 0 1.5rem;
+                padding: 0 $spaceSmall;
             }
             &__quote{
                 font-size: 1.7rem;
                 line-height: 2.7rem;
                 font-weight: 900;
-                padding-bottom: 1.5rem;
+                padding-bottom: $spaceSmall;
                 width: 98%;
             }
             &__head-2{
-                font-size:2rem;
+                font-size: $sHeader;
                 font-weight: 800;
             }
         }
         .author{
-            margin-bottom: 3.5rem;
+            margin-bottom: $spaceXLarge;
         }
         .article-ctn {
             display: flex;
             flex-direction: row;
-            margin-bottom: 2.5rem;
+            margin-bottom: $spaceLarge;
         }
         .bottom{
-            margin: 0 1.5rem;
+            margin: 0 $spaceSmall;
         }
     }
     @include desktop-small{
         .musicians{
             &__head{
-                padding: 0 3rem;
+                padding: 0 $spaceLarger;
             }
             &__img-ctn{
                 display: flex;
@@ -199,18 +193,20 @@
                 padding-left: 6rem;
             }
             &__head-2{
-                padding: 0 0 3rem 6rem;
+                font-size: 1.7rem;
+                padding: 0 0 $spaceLarger 6rem;
+                font-weight: 800;
             }
         }
         .author {
             padding-left: 6rem;
-            margin-bottom: 3rem;
+            margin-bottom: $spaceLarger;
         }
         .article-ctn {
             width: 85%;
             padding: 0 0 0 6rem;
             .top {
-                margin-right: 2.5rem;
+                margin-right: $spaceLarge;
             }
             .bottom {
                 margin: 0;
@@ -236,46 +232,45 @@
                 padding-left: 9.5rem;
             }
             &__head-2{
-                padding: 0 0 3rem 9.5rem;
+                font-size: 1.7rem;
+                padding: 0 0 $spaceLarger 9.5rem;
+                font-weight: 800;
             }
         }
         .author {
             padding-left: 9.5rem;
-            margin-bottom: 3rem;
+            margin-bottom: $spaceLarger;
         }
         .article-ctn {
             width: 85%;
             padding: 0 0 0 9.5rem;
         }
         .bottom {
-            margin: 0 0 0 2.5rem;
+            margin: 0 0 0 $spaceLarge;
         }
     }        
 }
 
-// Gallery Styles
+// Gallery Section Styles
 
 .gallery {
     background-color: $alabaster;
-    margin-bottom: $mspaceLarge;
+    margin-bottom: $spaceLarge;
     &__wrap{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 $mspaceXSmall;
+    padding: 0 $spaceXSmall;
     }
     &__head{
         @include header-2;
-        padding: $mspaceMedium 0 $mspaceSmall $mspaceXSmall;
-        // padding-left: $mspaceXSmall;
-        // padding-bottom: $mspaceSmall;
+        padding: $spaceMedium 0 $spaceSmall $spaceXSmall;
     }
     &__img{
         width: 100%;
         min-width: 288px;
         height: 50vw;
-        background-color: blue;
-        margin-bottom: $mspaceXSmall;
+        margin-bottom: $spaceXSmall;
     }
     .img-1{
         background-image: url('../assets/Images/Photo-gallery-1.jpg');
@@ -316,42 +311,42 @@
     @include mobile-lg {
         .gallery{
             &__head{
-                font-size: 2rem;
+                font-size: $spaceMedium;
             }
         }
     }
     @include tablet {
         .gallery{
             &__head{
-                font-size: 3rem;
-                padding: 4rem 0 4rem 1.5rem;
+                font-size: $header;
+                padding: 4rem 0 4rem $spaceSmall;
             }
             &__wrap{
                 flex-direction: row;
                 flex-wrap: wrap;
-                padding: 0 1.5rem;
+                padding: 0 $spaceSmall;
                 justify-content: space-between;
             }
             &__img{
                 min-width: 224px;
                 width: 31%;
                 height: 16.5vw;
-                margin-bottom:1.5rem;
+                margin-bottom:$spaceSmall
             }
         }
     }
     @include desktop-small{
         .gallery{
             &__head {
-                padding: 4rem 0 4rem 3rem;
+                padding: 4rem 0 4rem $spaceLarger;
             }
             &__wrap {
-                padding: 0 2.5rem;
+                padding: 0 $spaceLarge;
             }
             &__img {
                 width: 32%;
                 height: 17.5vw;
-                margin-bottom: 1rem;
+                margin-bottom: $spaceXSmall;
                 opacity: .5;
                 transition: all .3s ease-in-out;
                 &__hover{
@@ -380,81 +375,74 @@
     }
 }
 
-
-
-
-
-    // Footer   
+    // Footer Section Styles   
 .intouch {
     width: 100vw;
     background-color: $black;
     color: $white;
-    padding-top: 3.5rem;
-    padding-bottom: 3rem; 
+    padding-top: $spaceXLarge;
+    padding-bottom: $spaceLarge; 
     .footer-head {
         @include header-2;
         color:$white;
-        font-size: 2rem;
-        padding: 0 0 $mspaceMedium $mspaceXSmall;
+        font-size: $sHeader;
+        padding: 0 0 $spaceMedium $spaceXSmall;
     }
     .footer-wrap{
-        padding: 0 $mspaceXSmall;
+        padding: 0 $spaceXSmall;
         width: 100%;
         display: flex;
         flex-direction: column;
-        // align-items: flex-start;
     }
     .icon {
         color: $white;
         height: $mHeaderSize;
-        margin-right: $mspaceMedium;
-        margin-bottom: $mspaceLarge;
-        padding: 0 1rem;
+        margin-right: $spaceXSmall;
+        margin-bottom: $spaceLarge;
+        padding: 0 $spaceXSmall;
     }
     .footer-logo {
         display: none;
     }
     .contact-head{
         color: $white;
-        font-size: 1rem;
-        font-weight: 400;
+        font-size: $subHeader;
+        font-weight: 500;
         line-height: $subHeaderHeight;
     }
     .contact-item{
         color: $silver;
         width: 65%;
         line-height: $subHeaderHeight;
-        padding: $mspaceSmall 0 $mspaceSmall 0;
+        padding: $spaceSmall 0 $spaceSmall 0;
     }
     .contact-link{
-        padding-bottom: $mspaceLarge;
+        padding-bottom: $spaceLarge;
     }
     .contact-email{
         color: $silver;
-        font-size: $mContactSize + .07rem;
+        font-size: $contactSize;
     }
     .copyright {
         color: $silver;
         width: 86%;
         line-height: $subHeaderHeight;
-        padding: 0 1rem;
+        padding: 0 $spaceXSmall;
     }
     @include mobile-lg {
-        // .intouch {
-        //     height: 55rem;
-        // }
         .footer-head{
-            font-size: 3rem;
+            font-size: $header;
         }
         .contact-head {
             font-size: 1.15rem;
+            font-weight: 500;
         }
     }
     @include tablet {
         .footer-head{
             display: inline-block;
             font-size: 2.5rem;
-            padding: 0 0.5rem 2rem 1.5rem;
+            padding: 0 0.5rem $spaceMedium $spaceSmall;
         }
         .social-icons{
             display: inline-flex;
@@ -464,7 +452,7 @@
             justify-content: space-between;
             .social-ctn {
                 display: flex;
-                margin-left: 1rem; 
+                margin-left: $spaceXSmall; 
                 .icon{
                     margin-right: 0;
                 }
@@ -477,7 +465,7 @@
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            padding: 2rem 1rem 0 1.5rem;
+            padding: $spaceMedium $spaceXSmall 0 $spaceSmall;
             .contact-head {
                 font-size:1rem;
             }
@@ -490,32 +478,33 @@
             }
         }
         .copyright {
-            padding: 0 1.5rem;
+            padding: 0 $spaceSmall;
         }  
     }
     @include desktop-small {
         .footer-head {
-            padding: 0 1rem 2rem 2.5rem;
+            padding: 0 $spaceXSmall $spaceMedium $spaceLarge;
         }
         .contact-head {
             font-size: 1.2rem !important;
+            font-weight: 500;
         }
         .social-icons{
             justify-content: space-between;
             width: 68%;
             .social-ctn {
                 display: flex;
-                margin-left: 1rem;
+                margin-left: $spaceXSmall;
                 .icon {
                     margin-right: 0;
                 }
             }
         }
-        // .footer-logo {
-        //     left: 21rem;
-        // }
+        .footer-logo {
+            height: 1.3rem;
+        }
         .footer-wrap {
-            padding: 1.5rem 1rem 0 2.5rem;
+            padding: $spaceSmall $spaceXSmall 0 $spaceLarge;
             width: 90%;
             .contact-list {
                 width: 31%;
@@ -525,15 +514,18 @@
             }
         }
        .copyright{
-           padding: 0 2.5rem;
+           padding: 0 $spaceLarge;
        } 
     }
     @include desktop-lg {
         .footer-head {
-            padding: 0 0 2rem 4.5rem;
+            padding: 0 0 $spaceMedium 4.5rem;
+        }
+        .footer-logo {
+            height: 1.3rem;
         }
         .footer-wrap{
-            padding: 1.5rem 1rem 0 4.5rem;
+            padding: $spaceSmall $spaceXSmall 0 4.5rem;
             width: 90%;
             .contact-head {
                 font-size: 1.2rem;

@@ -11,18 +11,22 @@ $desktop-small-breakpoint: 1024px;
 $desktop-lg-breakpoint: 1200px;
 
 // Hero Header Variables
-$heroHeader: 3.75rem;
-$heroLineHeight: 4.25rem;
+$heroHeader: 4.5rem;
+$heroLineHeight: 5.5rem;
 $heroFontWeight: 900;
 
+$heroHead-d:5rem;
+$heroHeadHeight-d: 6.5rem;
+$heroHeadWeight-d: 900;
+
 // H1 Variables
-$header: 2.25rem;
-$headerLineHeight: 2.75rem;
+$header: 3rem;
+$headerLineHeight: 2rem;
 $headerFontWeight: 900;
 
 // H2 Variables
-$sHeader: 1.5rem;
-$sHeaderLineHeight: 2rem;
+$sHeader: 2rem;
+$sHeaderLineHeight: 1.375rem;
 $sHeaderFontWeight: 900;
 
 // H3 Variables
@@ -31,8 +35,8 @@ $subHeaderHeight: 1.5rem;
 $subHeaderFontWeight: 700;
 
 // H4/P Variables Paragraph & Comments Variables
-$paragraphSize: .875rem;
-$paragraphHeight: 1.375rem;
+$paragraphSize: .945rem;
+$paragraphHeight: 1.525rem;
 $paragraphFontWeight: 400;
 
 // H4/P Variables Lists & Contact Info Variables
@@ -49,22 +53,22 @@ $labelFontWeight: 700;
 
 // Mobile Header Variables
 $mHeaderSize: 1.5rem;
-$mHeaderLineHeight: 2rem;
+$mHeaderLineHeight: 2.1rem;
 $mHeaderFontWeight: 900;
 
 // Mobile Sub Header Variables
-$mSubHeaderSize: .875rem;
+$mSubHeaderSize: 1.1rem;
 $mSubHeaderLineHeight: 1.375rem;
 $mSubHeaderFontWeight: 700;
 
 // Mobile Paragraph Variables
-$mParagraphSize: 0.8125rem;
-$mParagraphLineHeight: 1.125rem;
+$mParagraphSize: 0.945rem;
+$mParagraphLineHeight: 1.525rem;
 $mParagraphFontWeight: 400;
 
 // Mobile List & Contact Variables
-$mContactSize: 0.8125rem;
-$mContactLineHeight: 1.125rem;
+$mContactSize: 1rem;
+$mContactLineHeight: 1.5rem;
 $mContactFontWeight: 400;
 
 // Mobile Labels Variables
@@ -83,7 +87,9 @@ $alabaster: #FAFAFA;
 $white:#ffffff;
 
 // Mobile Spacing Variables
-$mspaceXSmall: 1rem;
-$mspaceSmall: 1.5rem;
-$mspaceMedium: 2rem;
-$mspaceLarge: 2.5rem;
+$spaceXSmall: 1rem;
+$spaceSmall: 1.5rem;
+$spaceMedium: 2rem;
+$spaceLarge: 2.5rem;
+$spaceLarger: 3rem;
+$spaceXLarge: 3.5rem;

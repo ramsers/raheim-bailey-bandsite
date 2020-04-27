@@ -1,5 +1,5 @@
 @import 'variables';
-
+// Fonts
 @font-face {
 	font-family: "Roboto";
 	src: url('../../assets/roboto/Roboto-Regular.ttf') format('ttf');
@@ -21,7 +21,7 @@
 	src: url('../../assets/roboto/Roboto-Black.ttf') format('ttf');
 	font-weight: 900;
 }
-// CSS Reset
+// CSS Reset Styles
 * {
 	margin: 0;
 	padding: 0;
