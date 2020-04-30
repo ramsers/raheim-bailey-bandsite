@@ -1,0 +1,95 @@
+@import "global-styles";
+
+
+
+/*Desktop & Tablet Text Variables */
+
+// Desktop & Tablet Breakpoint Variables
+$mobilelg-breakpoint: 425px;
+$tablet-breakpoint: 768px;
+$desktop-small-breakpoint: 1024px;
+$desktop-lg-breakpoint: 1200px;
+
+// Hero Header Variables
+$heroHeader: 4.5rem;
+$heroLineHeight: 5.5rem;
+$heroFontWeight: 900;
+
+$heroHead-d:5rem;
+$heroHeadHeight-d: 6.5rem;
+$heroHeadWeight-d: 900;
+
+// H1 Variables
+$header: 3rem;
+$headerLineHeight: 2rem;
+$headerFontWeight: 900;
+
+// H2 Variables
+$sHeader: 2rem;
+$sHeaderLineHeight: 1.375rem;
+$sHeaderFontWeight: 900;
+
+// H3 Variables
+$subHeader: 1rem;
+$subHeaderHeight: 1.5rem;
+$subHeaderFontWeight: 700;
+
+// H4/P Variables Paragraph & Comments Variables
+$paragraphSize: .945rem;
+$paragraphHeight: 1.525rem;
+$paragraphFontWeight: 400;
+
+// H4/P Variables Lists & Contact Info Variables
+$contactSize: .875rem;
+$contactLineHeight: 1.25rem;
+$contactFontWeight: 400;
+
+// H5 Labels Variables
+$labelSize: 0.75rem;
+$labelLineHeight: .875rem;
+$labelFontWeight: 700;
+
+/* Mobile Text Variables */
+
+// Mobile Header Variables
+$mHeaderSize: 1.5rem;
+$mHeaderLineHeight: 2.1rem;
+$mHeaderFontWeight: 900;
+
+// Mobile Sub Header Variables
+$mSubHeaderSize: 1.1rem;
+$mSubHeaderLineHeight: 1.375rem;
+$mSubHeaderFontWeight: 700;
+
+// Mobile Paragraph Variables
+$mParagraphSize: 0.945rem;
+$mParagraphLineHeight: 1.525rem;
+$mParagraphFontWeight: 400;
+
+// Mobile List & Contact Variables
+$mContactSize: 1rem;
+$mContactLineHeight: 1.5rem;
+$mContactFontWeight: 400;
+
+// Mobile Labels Variables
+
+$mLabelSize: .75rem;
+$mLabelLineHeight: 1.25rem;
+$mLabelFontWeight: 700;
+
+// Color Variables
+$black: #323232;
+$primaryCTA: #323232;
+$primaryCTAHover: #0065AD;
+$silver: #AFAFAF;
+$mercury: #E1E1E1;
+$alabaster: #FAFAFA;
+$white:#ffffff;
+
+// Mobile Spacing Variables
+$spaceXSmall: 1rem;
+$spaceSmall: 1.5rem;
+$spaceMedium: 2rem;
+$spaceLarge: 2.5rem;
+$spaceLarger: 3rem;
+$spaceXLarge: 3.5rem;

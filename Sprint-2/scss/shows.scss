@@ -1,0 +1,93 @@
+@import "../scss/partials/reset";
+@import "../scss/partials/variables";
+@import "../scss/partials/mixins";
+@import "../scss/partials/header";
+@import "../scss/partials/footer";
+
+
+.hero {
+    width: 100vw;
+    height: 147vw;
+    background-image: url('../assets/Images/sebastiaan-stam-RChZT-JlI9g-unsplash.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    &__ctn {
+        padding: 1rem;
+        font-size: $subHeader;
+        height: inherit;
+        width: 100vw;
+        background-color: $black;
+        opacity: 50%;
+        position: absolute;
+        top: 6.4rem;
+        z-index: 1;
+        transition: opacity .4s ease-in-out;
+    }
+    &__head-2{
+        color: $white;
+        font-weight: 600;
+        opacity: 1;
+        z-index: 2;
+        position: relative;
+        padding: $spaceMedium $spaceXSmall 0 $spaceXSmall;
+    }
+    &__head-main {
+        font-size: 2.3rem;
+        color: $white;
+        opacity: 1;
+        z-index: 2;
+        padding: 0.6rem $spaceXSmall $spaceXSmall $spaceXSmall;
+        line-height: 3.5rem;
+        font-weight: 900;
+    }
+    .player-ctn {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+    }
+    &__player {
+        width: 91%;
+        height: 7.5rem;
+        z-index: 2;
+    }
+}
+@include mobile-lg {
+    .hero{
+        height: 118vw;
+        &__head-main {
+            font-size: $header;
+        }
+        &__player {
+            height: 8.5rem;
+        }
+    }
+}
+@include tablet {
+    .hero{
+        height: 88vw;
+        &__head-2 {
+            font-size: $mHeaderSize;
+            padding: 4rem $spaceXSmall 0 $spaceSmall;
+        }
+        &__head-main {
+            @include heroHead;
+            padding: 2.6rem $spaceXSmall $spaceLarger $spaceSmall;
+            width: 85%;
+        }
+        &__player {
+            width: 65%;
+            height: 10.5rem;
+        }
+        .player-ctn {
+            align-items: flex-start;
+            padding: 0 $spaceSmall;
+        }
+    }
+}

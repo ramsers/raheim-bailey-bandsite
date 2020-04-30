@@ -1,0 +1,563 @@
+@import "partials/reset";
+@import "partials/variables";
+@import "partials/global-styles";
+@import "partials/mixins";
+@import "partials/header";
+@import "partials/footer";
+
+// Hero Section Styles
+
+.hero{
+    height: 58vw;
+    width: 100vw;
+    background-image: url('../assets/Images/Gaspard_Augé_and_Xavier_de_Rosnay_\(Justice\).jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &__ctn{
+        height: inherit;
+        width: 100vw;
+        background-color: $black;
+        opacity: 50%;
+        position: absolute;
+        top: 6.4rem;
+        z-index: 1;
+        transition: opacity .4s ease-in-out;
+        &:hover{
+            opacity: 30%;
+        }
+    }
+    &__head {
+        @include header-2;
+        width: 69%;
+        color: $white;
+        opacity: 1;
+        z-index: 2;
+        position: relative;
+        padding: 0 $spaceXSmall;
+    }
+    @include mobile-lg {
+        .hero{
+            &__head{
+                @include secondHead;
+                line-height: 2.7rem;
+            }
+        }
+    }
+    @include tablet {
+        .hero {
+            height: 53vw;
+                &__head{
+                    @include heroHead;
+                    padding: 0 $spaceSmall;
+                    width: 81%;
+                }
+            }
+        }
+    @include desktop-small{
+        .hero{
+            &__head{
+                @include heroHead-d;
+                padding: 0 $spaceLarger;
+            }
+        }
+    } 
+    @include desktop-lg{
+        .hero{
+            &__head {
+                @include heroHead-d;
+                padding: 0 4.5rem;
+                width: 65%;            
+            }
+        }
+    }       
+}
+
+
+// Musician Section Styles
+.musicians{
+    &__wrap{
+        padding: 0 $spaceXSmall;
+        display: flex;
+        flex-direction: column;
+    }
+    &__head{
+        @include header-2;
+        padding-left: $spaceXSmall;
+        margin-top: $spaceMedium; 
+    }
+    &__img {
+        padding-top: $spaceMedium;
+        width: 100%;
+        height:69vw;
+        padding-bottom: $spaceSmall;
+    }
+    &__quote {
+        font-size: 1.15rem;
+        line-height: 1.9rem;
+        font-family: "Roboto";
+        font-weight: 500;
+        text-align: left;
+        padding-bottom: $spaceSmall;
+        width: 93%;
+    }
+    &__head-2{
+        @include subHead-2;
+        font-size: 1.05rem;
+        font-weight: 800;
+        padding-bottom: $spaceSmall;
+    }
+    .author{
+        font-size: 1rem;
+        font-weight: 500;
+        text-align: left;
+        margin-bottom: $spaceLarge;
+        display: inline-block;
+    }
+    .article {
+        @include textContent-2;
+        line-height: 1.725rem;
+        font-size: $paragraphSize;
+        width: 96%;
+    }
+    .top {
+        margin-bottom: $spaceSmall;
+    }
+    .bottom {
+        margin-bottom: $spaceLarge;
+    }
+    @include mobile-lg {
+        .musicians{
+            &__head{
+                font-size: $sHeader;
+            }
+        }
+    }
+    @include tablet {
+        .musicians{
+            &__head{
+                font-size: $header;
+                margin-top: 4rem;
+                padding-left: $spaceSmall;
+            }
+            &__img{
+                height: 58vw;
+                padding-top: $spaceLarger;
+                padding-bottom: $spaceLarge;
+            }
+            &__wrap{
+                padding: 0 $spaceSmall;
+            }
+            &__quote{
+                font-size: 1.7rem;
+                line-height: 2.7rem;
+                font-weight: 900;
+                padding-bottom: $spaceSmall;
+                width: 98%;
+            }
+            &__head-2{
+                font-size: $sHeader;
+                font-weight: 800;
+            }
+        }
+        .author{
+            margin-bottom: $spaceXLarge;
+        }
+        .article-ctn {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: $spaceLarge;
+        }
+        .bottom{
+            margin: 0 $spaceSmall;
+        }
+    }
+    @include desktop-small{
+        .musicians{
+            &__head{
+                padding: 0 $spaceLarger;
+            }
+            &__img-ctn{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+            &__img{
+                width: 80%;
+                height: 49vw;
+            }
+            &__quote {
+                width: 90%;
+                padding-left: 6rem;
+            }
+            &__head-2{
+                font-size: 1.7rem;
+                padding: 0 0 $spaceLarger 6rem;
+                font-weight: 800;
+            }
+        }
+        .author {
+            padding-left: 6rem;
+            margin-bottom: $spaceLarger;
+        }
+        .article-ctn {
+            width: 85%;
+            padding: 0 0 0 6rem;
+            .top {
+                margin-right: $spaceLarge;
+            }
+            .bottom {
+                margin: 0;
+            }
+        }
+    }
+    @include desktop-lg {
+        .musicians{
+            &__head {
+                padding-left: 4.5rem;
+            }
+            &__img-ctn{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+            &__img{
+                width: 75%;
+                height: 45vw;
+            }
+            &__quote {
+                width: 90%;
+                padding-left: 9.5rem;
+            }
+            &__head-2{
+                font-size: 1.7rem;
+                padding: 0 0 $spaceLarger 9.5rem;
+                font-weight: 800;
+            }
+        }
+        .author {
+            padding-left: 9.5rem;
+            margin-bottom: $spaceLarger;
+        }
+        .article-ctn {
+            width: 85%;
+            padding: 0 0 0 9.5rem;
+        }
+        .bottom {
+            margin: 0 0 0 $spaceLarge;
+        }
+    }        
+}
+
+// Gallery Section Styles
+
+.gallery {
+    background-color: $alabaster;
+    margin-bottom: $spaceLarge;
+    &__wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 $spaceXSmall;
+    }
+    &__head{
+        @include header-2;
+        padding: $spaceMedium 0 $spaceSmall $spaceXSmall;
+    }
+    &__img{
+        width: 100%;
+        min-width: 288px;
+        height: 50vw;
+        margin-bottom: $spaceXSmall;
+    }
+    .img-1{
+        background-image: url('../assets/Images/Photo-gallery-1.jpg');
+        @include imgGallery;
+    }
+    .img-2{
+        background-image: url('../assets/Images/Photo-gallery-2.jpg');
+        @include imgGallery;
+    }
+    .img-3{
+        background-image: url('../assets/Images/Photo-gallery-3.jpg');
+        @include imgGallery;
+    }
+    .img-4{
+        background-image: url('../assets/Images/Photo-gallery-4.jpg');
+        @include imgGallery;
+    }
+    .img-5{
+        background-image: url('../assets/Images/Photo-gallery-5.jpg');
+        @include imgGallery;
+    }
+    .img-6{
+        background-image: url('../assets/Images/Photo-gallery-6.jpg');
+        @include imgGallery;
+    }
+    .img-7{
+        background-image: url('../assets/Images/Photo-gallery-7.jpg');
+        @include imgGallery;
+    }
+    .img-8{
+        background-image: url('../assets/Images/Photo-gallery-8.jpg');
+        @include imgGallery;
+    }
+    .img-9{
+        background-image: url('../assets/Images/Photo-gallery-9.jpg');
+        @include imgGallery;
+    }
+    @include mobile-lg {
+        .gallery{
+            &__head{
+                font-size: $spaceMedium;
+            }
+        }
+    }
+    @include tablet {
+        .gallery{
+            &__head{
+                font-size: $header;
+                padding: 4rem 0 4rem $spaceSmall;
+            }
+            &__wrap{
+                flex-direction: row;
+                flex-wrap: wrap;
+                padding: 0 $spaceSmall;
+                justify-content: space-between;
+            }
+            &__img{
+                min-width: 224px;
+                width: 31%;
+                height: 16.5vw;
+                margin-bottom:$spaceSmall
+            }
+        }
+    }
+    @include desktop-small{
+        .gallery{
+            &__head {
+                padding: 4rem 0 4rem $spaceLarger;
+            }
+            &__wrap {
+                padding: 0 $spaceLarge;
+            }
+            &__img {
+                width: 32%;
+                height: 17.5vw;
+                margin-bottom: $spaceXSmall;
+                opacity: .5;
+                transition: all .3s ease-in-out;
+                &__hover{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    @include desktop-lg{
+        .gallery{
+            &__head{
+                padding: 4rem 0 4rem 4.5rem; 
+            }
+            &__wrap {
+                padding: 0 4.5rem;
+            }
+            &__img {
+                width: 32%;
+                opacity: .5;
+                transition: all .4s ease-in-out;
+                &:hover{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+//     // Footer Section Styles   
+// .intouch {
+//     width: 100vw;
+//     background-color: $black;
+//     color: $white;
+//     padding-top: $spaceXLarge;
+//     padding-bottom: $spaceLarge; 
+//     .footer-head {
+//         @include header-2;
+//         color:$white;
+//         font-size: $sHeader;
+//         padding: 0 0 $spaceMedium $spaceXSmall;
+//     }
+//     .footer-wrap{
+//         padding: 0 $spaceXSmall;
+//         width: 100%;
+//         display: flex;
+//         flex-direction: column;
+//     }
+//     .icon {
+//         color: $white;
+//         height: $mHeaderSize;
+//         margin-right: $spaceXSmall;
+//         margin-bottom: $spaceLarge;
+//         padding: 0 $spaceXSmall;
+//     }
+//     .footer-logo {
+//         display: none;
+//     }
+//     .contact-head{
+//         color: $white;
+//         font-size: $subHeader;
+//         font-weight: 500;
+//         line-height: $subHeaderHeight;
+//     }
+//     .contact-item{
+//         color: $silver;
+//         width: 65%;
+//         line-height: $subHeaderHeight;
+//         padding: $spaceSmall 0 $spaceSmall 0;
+//     }
+//     .contact-link{
+//         padding-bottom: $spaceLarge;
+//     }
+//     .contact-email{
+//         color: $silver;
+//         font-size: $contactSize;
+//     }
+//     .copyright {
+//         color: $silver;
+//         width: 86%;
+//         line-height: $subHeaderHeight;
+//         padding: 0 $spaceXSmall;
+//     }
+//     @include mobile-lg {
+//         .footer-head{
+//             font-size: $header;
+//         }
+//         .contact-head {
+//             font-size: 1.15rem;
+//             font-weight: 500;
+//         }
+//     }
+//     @include tablet {
+//         .footer-head{
+//             display: inline-block;
+//             font-size: 2.5rem;
+//             padding: 0 0.5rem $spaceMedium $spaceSmall;
+//         }
+//         .social-icons{
+//             display: inline-flex;
+//             flex-direction: row;
+//             align-items: baseline;
+//             width: 62%;
+//             justify-content: space-between;
+//             .social-ctn {
+//                 display: flex;
+//                 margin-left: $spaceXSmall; 
+//                 .icon{
+//                     margin-right: 0;
+//                 }
+//             }
+//         }
+//         .footer-logo {
+//             display: flex;
+//         }
+//         .footer-wrap{
+//             display: flex;
+//             flex-direction: row;
+//             justify-content: space-between;
+//             padding: $spaceMedium $spaceXSmall 0 $spaceSmall;
+//             .contact-head {
+//                 font-size:1rem;
+//             }
+//             .contact-item {
+//                 width: 200px;
+//             }
+//             .contact-list {
+//                 width: 32%;
+//                 margin-right: -15px;
+//             }
+//         }
+//         .copyright {
+//             padding: 0 $spaceSmall;
+//         }  
+//     }
+//     @include desktop-small {
+//         .footer-head {
+//             padding: 0 $spaceXSmall $spaceMedium $spaceLarge;
+//         }
+//         .contact-head {
+//             font-size: 1.2rem !important;
+//             font-weight: 500;
+//         }
+//         .social-icons{
+//             justify-content: space-between;
+//             width: 68%;
+//             .social-ctn {
+//                 display: flex;
+//                 margin-left: $spaceXSmall;
+//                 .icon {
+//                     margin-right: 0;
+//                 }
+//             }
+//         }
+//         .footer-logo {
+//             height: 1.3rem;
+//         }
+//         .footer-wrap {
+//             padding: $spaceSmall $spaceXSmall 0 $spaceLarge;
+//             width: 90%;
+//             .contact-list {
+//                 width: 31%;
+//             }
+//             .contact-item {
+//                 width: 200px !important;
+//             }
+//         }
+//        .copyright{
+//            padding: 0 $spaceLarge;
+//        } 
+//     }
+//     @include desktop-lg {
+//         .footer-head {
+//             padding: 0 0 $spaceMedium 4.5rem;
+//         }
+//         .footer-logo {
+//             height: 1.3rem;
+//         }
+//         .footer-wrap{
+//             padding: $spaceSmall $spaceXSmall 0 4.5rem;
+//             width: 90%;
+//             .contact-head {
+//                 font-size: 1.2rem;
+//             }
+//             .contact-list {
+//                 width: 31%;
+//             }
+//             .contact-item {
+//                 width: 200px !important;
+//             }
+//         }
+//         .social-icons{
+//             justify-content: space-between;
+//             width: 69%;
+//             .social-ctn {
+//                 display: flex;
+//                 margin-left: 5rem;
+//                 .icon {
+//                     margin-right: 0;
+//                 }
+//             }
+//         }
+//         .copyright{
+//             padding: 0 4.5rem;
+//         } 
+//     }
+// }
+
+
+
+
+
+
+
