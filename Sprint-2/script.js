@@ -1,225 +1,200 @@
-// var divArr = [];
-
-//  function createDiv() {
-//     for(var i = 0; i < 7; i++) {
-//         var divCreate = document.createElement("div");
-//         divArr.push(divCreate[i]);
-//     }
-//     return divArr;
-//  }   
-
-// console.log(divArr[0]);
-
-// Creation of Div Elements
-let div1 = document.createElement("div");
-let div2 = document.createElement("div");
-let div3 = document.createElement("div");
-let div4 = document.createElement("div");
-let div5 = document.createElement("div");
-let div6 = document.createElement("div");
-
-// Adding classes to divs
-div1.classList.add("shows__one");
-div2.classList.add("shows__two");
-div3.classList.add("shows__three");
-div4.classList.add("shows__four");
-div5.classList.add("shows__five");
-div6.classList.add("shows__six");
-
-// Pushing div to Array
-let divArr = [];
-divArr.push(div1);
-divArr.push(div2);
-divArr.push(div3);
-divArr.push(div4);
-divArr.push(div5);
-divArr.push(div6);
-console.log(divArr);
-
-// Selecting wrapper, looping through Divs & Appending to wrapper
-let showsWrap = document.querySelector(".shows__wrap");
-
-for (let i = 0; i < divArr.length; i++) {
-    showsWrap.appendChild(divArr[i]);
-}
 // Put all shows in an array in grouped objects
 let shows = [
     {
-        "Date": "Mon Dec 17 2018",
-        "Venue": "Ronald Lane",
-        "Location": "San Francisco, CA"
+        Date: "Mon Dec 17 2018",
+        Venue: "Ronald Lane",
+        Location: "San Francisco, CA"
     },
     {
-        "Date": "Tue Jul 18 2019",
-        "Venue": "Pier 3 East",
-        "Location": "San Francisco, CA"
+        Date: "Tue Jul 18 2019",
+        Venue: "Pier 3 East",
+        Location: "San Francisco, CA"
     },
     {
-        "Date": "Fri Jul 22 2019",
-        "Venue": "View Loungue",
-        "Location": "San Francisco, CA"
+        Date: "Fri Jul 22 2019",
+        Venue: "View Loungue",
+        Location: "San Francisco, CA"
     },
     {
-        "Date": "Sat Aug 12 2019",
-        "Venue": "Hyatt Agency",
-        "Location": "San Francisco, CA"
+        Date: "Sat Aug 12 2019",
+        Venue: "Hyatt Agency",
+        Location: "San Francisco, CA"
     },
     {
-        "Date": "Fri Sep 05 2019",
-        "Venue": "Moscow Center",
-        "Location": "San Francisco, CA"
+        Date: "Fri Sep 05 2019",
+        Venue: "Moscow Center",
+        Location: "San Francisco, CA"
     },
     {
-        "Date": "Wed Aug 11 2019",
-        "Venue": "Pres Club",
-        "Location": "San Francisco, CA"
+        Date: "Wed Aug 11 2019",
+        Venue: "Pres Club",
+        Location: "San Francisco, CA"
     },
 ]
 
-let showsLabel = shows.map(Object.keys);
-let showsInfo = shows.map(Object.values);
-console.log(showsLabel);
-// console.log(showsLabel[0][0])
-console.log(showsInfo);
 
-// Create Div Head Variable to hold H5's
-// Create Array to hold all H5's for reassignment
-let divHead;
-let divHeadArr = [];
 
-for (let i = 0; i < 19; i++) {
-        divHead = document.createElement("h5");
-        divHead.classList.add("shows__label");
-        divHeadArr.push(divHead);
-    }
+let showsInfo = [["Date"], ["Venue"], ["Location"]];
 
-     // First Show Titles
-let div1Date = divHeadArr[0];
-let div1Venue = divHeadArr[1];
-let div1Loc = divHeadArr[2];
+// let showsContent = shows.map(Object.values);
+// console.log(showsContent);
 
-let div1DateKey = 
 
-div1Date.innerText = showsLabel[0][0];
-div1Venue.innerText = showsLabel[0][1];
-div1Loc.innerText = showsLabel[0][2];
-// console.log(div1Date);
-// console.log(div1Venue);
-// console.log(div1Loc);
+let rowGen = () => {
+    shows.forEach(() => {
+        let divCreate = document.createElement("div");
+        divCreate.classList.add("shows__row");
+        let showWrap = document.querySelector(".shows__wrap");
+        showWrap.appendChild(divCreate);
+        
+        let labelCreate1 = document.createElement("h5");
+        labelCreate1.classList.add("shows__date");
+        // console.log(labelCreate1);
+        
+        // labelCreate1.after(dateCreate1);
+        
 
-// Second Show Titles
-let div2Date = divHeadArr[0];
-let div2Venue = divHeadArr[1];
-let div2Loc = divHeadArr[2];
+        let labelCreate2 = document.createElement("h5");
+        labelCreate2.classList.add("shows__venue");
 
-div2Date.innerText = showsLabel[0][0];
-div2Venue.innerText = showsLabel[0][1];
-div2Loc.innerText = showsLabel[0][2];
+        let labelCreate3 = document.createElement("h5");
+        labelCreate3.classList.add("shows__location");
 
-// console.log(div2Date);
-// console.log(div2Venue);
-// console.log(div2Loc);
+        labelCreate1.innerText = showsInfo[0];
+        labelCreate2.innerText = showsInfo[1];
+        labelCreate3.innerText = showsInfo[2];
+        
+        divCreate.appendChild(labelCreate1);
+        divCreate.appendChild(labelCreate2);
+        divCreate.appendChild(labelCreate3);
+        // labelCreate1.after(dateCreate1);
+        
+        
+       
+    })
+}
+rowGen();
 
-// Third Show Titles
-let div3Date = divHeadArr[0];
-let div3Venue = divHeadArr[1];
-let div3Loc = divHeadArr[2];
+dateGen = () => {
+    let showsrow = document.querySelectorAll(".shows__date");
 
-div3Date.innerText = showsLabel[0][0];
-div3Venue.innerText = showsLabel[0][1];
-div3Loc.innerText = showsLabel[0][2];
+    let datesCreate1 = document.createElement("h4");
+    datesCreate1.innerText = shows[0].Date;
+    datesCreate1.classList.add("shows__dates");
 
-// console.log(div3Date);
-// console.log(div3Venue);
-// console.log(div3Loc);
+    let datesCreate2 = document.createElement("h4");
+    datesCreate2.innerText = shows[1].Date;
+    datesCreate2.classList.add("shows__dates");
 
-// Fourth Show Titles
-let div4Date = divHeadArr[0];
-let div4Venue = divHeadArr[1];
-let div4Loc = divHeadArr[2];
+    let datesCreate3 = document.createElement("h4");
+    datesCreate3.innerText = shows[2].Date;
+    datesCreate3.classList.add("shows__dates");
 
-div4Date.innerText = showsLabel[0][0];
-div4Venue.innerText = showsLabel[0][1];
-div4Loc.innerText = showsLabel[0][2];
+    let datesCreate4 = document.createElement("h4");
+    datesCreate4.innerText = shows[3].Date;
+    datesCreate4.classList.add("shows__dates");
 
-// console.log(div4Date);
-// console.log(div4Venue);
-// console.log(div4Loc);
+    let datesCreate5 = document.createElement("h4");
+    datesCreate5.innerText = shows[4].Date;
+    datesCreate5.classList.add("shows__dates");
 
-// Fifth Show Titles
-let div5Date = divHeadArr[0];
-let div5Venue = divHeadArr[1];
-let div5Loc = divHeadArr[2];
+    let datesCreate6 = document.createElement("h4");
+    datesCreate6.innerText = shows[5].Date;
+    datesCreate6.classList.add("shows__dates");
 
-div5Date.innerText = showsLabel[0][0];
-div5Venue.innerText = showsLabel[0][1];
-div5Loc.innerText = showsLabel[0][2];
+    showsrow.forEach(()=> {
+        showsrow[0].after(datesCreate1);
+        showsrow[1].after(datesCreate2);
+        showsrow[2].after(datesCreate3);
+        showsrow[3].after(datesCreate4);
+        showsrow[4].after(datesCreate5);
+        showsrow[5].after(datesCreate6);
+    })
+}
+dateGen();
 
-// console.log(div5Date);
-// console.log(div5Venue);
-// console.log(div5Loc);
 
-// Sixth Show Titles
-let div6Date = divHeadArr[0];
-let div6Venue = divHeadArr[1];
-let div6Loc = divHeadArr[2];
+venueGen = () => {
+    let showsVenue = document.querySelectorAll(".shows__venue");
+    console.log(showsVenue);
+    let showsVenue1 = document.createElement("p");
+    showsVenue1.innerText = shows[0].Venue;
+    showsVenue1.classList.add("shows__venues");
 
-div6Date.innerText = showsLabel[0][0];
-div6Venue.innerText = showsLabel[0][1];
-div6Loc.innerText = showsLabel[0][2];
+    let showsVenue2 = document.createElement("p");
+    showsVenue2.innerText = shows[1].Venue;
+    showsVenue2.classList.add("shows__venues");
 
-// console.log(div6Date);
-// console.log(div6Venue);
-// console.log(div6Loc);   
+    let showsVenue3 = document.createElement("p");
+    showsVenue3.innerText = shows[2].Venue;
+    showsVenue3.classList.add("shows__venues");
 
-let divDate;
-let divDateArr = [];
-// Create Div Date Elements
-for (let i = 0; i < 6; i++) {
-    divDate = document.createElement("h4");
-    divDate.classList.add("shows__date");
-    divDateArr.push(divDate);
+    let showsVenue4 = document.createElement("p");
+    showsVenue4.innerText = shows[3].Venue;
+    showsVenue4.classList.add("shows__venues");
+
+    let showsVenue5 = document.createElement("p");
+    showsVenue5.innerText = shows[4].Venue;
+    showsVenue5.classList.add("shows__venues");
+
+    let showsVenue6 = document.createElement("p");
+    showsVenue6.innerText = shows[5].Venue;
+    showsVenue6.classList.add("shows__venues");
+
+    showsVenue.forEach(() => {
+        showsVenue[0].after(showsVenue1);
+        showsVenue[1].after(showsVenue2);
+        showsVenue[2].after(showsVenue3);
+        showsVenue[3].after(showsVenue4);
+        showsVenue[4].after(showsVenue5);
+        showsVenue[5].after(showsVenue6);
+    })
+}
+venueGen();
+
+let showsLocation = () => {
+    let showsLocationHold = document.querySelectorAll(".shows__location");
+    let locationText1 = document.createElement("p");
+        locationText1.classList.add("shows__locations");
+        locationText1.innerText = shows[0].Location;
+
+    let locationText2 = document.createElement("p");
+        locationText2.classList.add("shows__locations");
+        locationText2.innerText = shows[0].Location;
+
+    let locationText3 = document.createElement("p");
+        locationText3.classList.add("shows__locations");
+        locationText3.innerText = shows[0].Location;
+
+    let locationText4 = document.createElement("p");
+        locationText4.classList.add("shows__locations");
+        locationText4.innerText = shows[0].Location;
+
+    let locationText5 = document.createElement("p");
+        locationText5.classList.add("shows__locations");
+        locationText5.innerText = shows[0].Location;
+
+    let locationText6 = document.createElement("p");
+        locationText6.classList.add("shows__locations");
+        locationText6.innerText = shows[0].Location;
+    showsLocationHold.forEach((rowGen)=> {
+
+        showsLocationHold[0].after(locationText1);
+        showsLocationHold[1].after(locationText2);
+        showsLocationHold[2].after(locationText3);
+        showsLocationHold[3].after(locationText4);
+        showsLocationHold[4].after(locationText5);
+        showsLocationHold[5].after(locationText6);
+    })
 }
 
-console.log(divDateArr);
+showsLocation();
+// let showDate2 = showsrow[1];
+// console.log(showDate2);
 
-// Create Div Venue Elements
-let divVenue;
-let divVenueArr = [];
-
-for (let i = 0; i < 6; i++) {
-    divVenue = document.createElement("p");
-    divVenue.classList.add("shows__venue");
-    divVenueArr.push(divVenue);
-}
-
-console.log(divVenueArr);
-
-// Create Location Elements
-
-let divLoc;
-let divLocArr = [];
-
-for (let i = 0; i < 6; i++) {
-    divLoc = document.createElement("p");
-    divLoc.classList.add("shows__loc");
-    divLocArr.push(divLoc);
-}
-
-console.log(divLocArr);
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
+// let dateCreate2 = document.createElement("p");
+//         dateCreate2.innerText = shows[1].Date;
+// showDate2.after(dateCreate2)
+//         console.log(dateCreate2);
 
 
