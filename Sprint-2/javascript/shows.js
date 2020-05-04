@@ -12,7 +12,7 @@ let shows = [
     },
     {
         Date: "Fri Jul 22 2019",
-        Venue: "View Loungue",
+        Venue: "View Lounge",
         Location: "San Francisco, CA"
     },
     {
@@ -33,13 +33,12 @@ let shows = [
 ]
 
 
-
+// Abstract Away Show Keys to seprate array
 let showsInfo = [["Date"], ["Venue"], ["Location"]];
 
-// let showsContent = shows.map(Object.values);
-// console.log(showsContent);
 
 
+//Create A function that generates Rows, labels, show info using a For Each Loop
 let rowGen = () => {
     shows.forEach(() => {
         let divCreate = document.createElement("div");
@@ -47,35 +46,46 @@ let rowGen = () => {
         let showWrap = document.querySelector(".shows__wrap");
         showWrap.appendChild(divCreate);
         
+        let dateCtn = document.createElement("div");
+        dateCtn.classList.add("date-ctn")
+
         let labelCreate1 = document.createElement("h5");
         labelCreate1.classList.add("shows__date");
-        // console.log(labelCreate1);
+        dateCtn.appendChild(labelCreate1);
+     
         
-        // labelCreate1.after(dateCreate1);
-        
+        let venueCtn =document.createElement("div");
+        venueCtn.classList.add("venue-ctn");
 
         let labelCreate2 = document.createElement("h5");
         labelCreate2.classList.add("shows__venue");
+        venueCtn.appendChild(labelCreate2);
+
+        locationCtn =document.createElement("div");
+        locationCtn.classList.add("location-ctn");
 
         let labelCreate3 = document.createElement("h5");
         labelCreate3.classList.add("shows__location");
+        locationCtn.appendChild(labelCreate3);
 
         labelCreate1.innerText = showsInfo[0];
         labelCreate2.innerText = showsInfo[1];
         labelCreate3.innerText = showsInfo[2];
         
-        divCreate.appendChild(labelCreate1);
-        divCreate.appendChild(labelCreate2);
-        divCreate.appendChild(labelCreate3);
+        divCreate.appendChild(dateCtn);
+        divCreate.appendChild(venueCtn);
+        divCreate.appendChild(locationCtn);
         // labelCreate1.after(dateCreate1);
         
+        let buyTicket = document.createElement("a");
+        buyTicket.classList.add("shows__btn");
+
+        buyTicket.innerText = "Buy Tickets";
+        divCreate.appendChild(buyTicket);
         
        
-    })
-}
-rowGen();
-
-dateGen = () => {
+    });
+    // Generate and Set show Date Info
     let showsrow = document.querySelectorAll(".shows__date");
 
     let datesCreate1 = document.createElement("h4");
@@ -101,22 +111,29 @@ dateGen = () => {
     let datesCreate6 = document.createElement("h4");
     datesCreate6.innerText = shows[5].Date;
     datesCreate6.classList.add("shows__dates");
-
+// For each tp set dates in appropriate place and add utility class
     showsrow.forEach(()=> {
         showsrow[0].after(datesCreate1);
+        showsrow[0].classList.add("s-1");
+
         showsrow[1].after(datesCreate2);
+        showsrow[1].classList.add("s-2");
+
         showsrow[2].after(datesCreate3);
+        showsrow[2].classList.add("s-2");
+
         showsrow[3].after(datesCreate4);
+        showsrow[3].classList.add("s-2");
+
         showsrow[4].after(datesCreate5);
+        showsrow[4].classList.add("s-2");
+
         showsrow[5].after(datesCreate6);
-    })
-}
-dateGen();
+        showsrow[5].classList.add("s-2");
+    });
 
-
-venueGen = () => {
+    // Generate and set Venue info
     let showsVenue = document.querySelectorAll(".shows__venue");
-    console.log(showsVenue);
     let showsVenue1 = document.createElement("p");
     showsVenue1.innerText = shows[0].Venue;
     showsVenue1.classList.add("shows__venues");
@@ -141,18 +158,27 @@ venueGen = () => {
     showsVenue6.innerText = shows[5].Venue;
     showsVenue6.classList.add("shows__venues");
 
+    // For each to put venue in proper place and add secondary utlity class for desktop versions
     showsVenue.forEach(() => {
         showsVenue[0].after(showsVenue1);
-        showsVenue[1].after(showsVenue2);
-        showsVenue[2].after(showsVenue3);
-        showsVenue[3].after(showsVenue4);
-        showsVenue[4].after(showsVenue5);
-        showsVenue[5].after(showsVenue6);
-    })
-}
-venueGen();
+        showsVenue[0].classList.add("s-1");
 
-let showsLocation = () => {
+        showsVenue[1].after(showsVenue2);
+        showsVenue[1].classList.add("s-2");
+
+        showsVenue[2].after(showsVenue3);
+        showsVenue[2].classList.add("s-2");
+
+        showsVenue[3].after(showsVenue4);
+        showsVenue[3].classList.add("s-2");
+
+        showsVenue[4].after(showsVenue5);
+        showsVenue[4].classList.add("s-2");
+
+        showsVenue[5].after(showsVenue6);
+        showsVenue[5].classList.add("s-2");
+    });
+
     let showsLocationHold = document.querySelectorAll(".shows__location");
     let locationText1 = document.createElement("p");
         locationText1.classList.add("shows__locations");
@@ -177,24 +203,28 @@ let showsLocation = () => {
     let locationText6 = document.createElement("p");
         locationText6.classList.add("shows__locations");
         locationText6.innerText = shows[0].Location;
-    showsLocationHold.forEach((rowGen)=> {
+        // For each to generate show locations adding utility classes
+    showsLocationHold.forEach(()=> {
 
         showsLocationHold[0].after(locationText1);
+        showsLocationHold[0].classList.add("s-1");
+
         showsLocationHold[1].after(locationText2);
+        showsLocationHold[1].classList.add("s-2");
+
         showsLocationHold[2].after(locationText3);
+        showsLocationHold[2].classList.add("s-2");
+
         showsLocationHold[3].after(locationText4);
+        showsLocationHold[3].classList.add("s-2");
+
         showsLocationHold[4].after(locationText5);
+        showsLocationHold[4].classList.add("s-2");
+
         showsLocationHold[5].after(locationText6);
-    })
+        showsLocationHold[5].classList.add("s-2");
+    });
 }
-
-showsLocation();
-// let showDate2 = showsrow[1];
-// console.log(showDate2);
-
-// let dateCreate2 = document.createElement("p");
-//         dateCreate2.innerText = shows[1].Date;
-// showDate2.after(dateCreate2)
-//         console.log(dateCreate2);
+rowGen();
 
 
