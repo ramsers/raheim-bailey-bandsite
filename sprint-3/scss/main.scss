@@ -441,6 +441,7 @@
     .gen-comment {
         display: flex;
         flex-direction: row-reverse;
+        justify-content: flex-end;
         margin: 2rem 0 2rem 0;
         padding-bottom: 2rem;
         border-bottom: 1px solid $mercury;
@@ -520,6 +521,9 @@
                 font-size: 1.2rem;
             }
         }
+      }
+      .gen-comment {
+          justify-content: flex-end;
       }
       .img-ctn{
         margin-right: 1rem;
