@@ -1,0 +1,565 @@
+@import "partials/reset";
+@import "partials/variables";
+@import "partials/global-styles";
+@import "partials/mixins";
+@import "partials/header";
+@import "partials/footer";
+
+// Hero Section Styles
+
+.hero{
+    height: 58vw;
+    width: 100vw;
+    background-image: url('../assets/images/Gaspard_Augé_and_Xavier_de_Rosnay_\(Justice\).jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &__ctn{
+        height: inherit;
+        width: 100vw;
+        background-color: $black;
+        opacity: 50%;
+        position: absolute;
+        top: 6.4rem;
+        z-index: 1;
+        transition: opacity .4s ease-in-out;
+        &:hover{
+            opacity: 30%;
+        }
+    }
+    &__head {
+        @include header-2;
+        width: 69%;
+        color: $white;
+        opacity: 1;
+        z-index: 2;
+        position: relative;
+        padding: 0 $spaceXSmall;
+    }
+    @include mobile-lg {
+        .hero{
+            &__head{
+                @include secondHead;
+                line-height: 2.7rem;
+            }
+        }
+    }
+    @include tablet {
+        .hero {
+            height: 53vw;
+                &__head{
+                    @include heroHead;
+                    padding: 0 $spaceSmall;
+                    width: 81%;
+                }
+            }
+        }
+    @include desktop-small{
+        .hero{
+            &__head{
+                @include heroHead-d;
+                padding: 0 $spaceLarger;
+            }
+        }
+    } 
+    @include desktop-lg{
+        .hero{
+            &__head {
+                @include heroHead-d;
+                padding: 0 4.5rem;
+                width: 65%;            
+            }
+        }
+    }       
+}
+
+
+// Musician Section Styles
+.musicians{
+    &__wrap{
+        padding: 0 $spaceXSmall;
+        display: flex;
+        flex-direction: column;
+    }
+    &__head{
+        @include header-2;
+        padding-left: $spaceXSmall;
+        margin-top: $spaceMedium; 
+    }
+    &__img {
+        padding-top: $spaceMedium;
+        width: 100%;
+        height:69vw;
+        padding-bottom: $spaceSmall;
+    }
+    &__quote {
+        font-size: 1.15rem;
+        line-height: 1.9rem;
+        font-family: "Roboto";
+        font-weight: 500;
+        text-align: left;
+        padding-bottom: $spaceSmall;
+        width: 93%;
+    }
+    &__head-2{
+        @include subHead-2;
+        font-size: 1.05rem;
+        font-weight: 800;
+        padding-bottom: $spaceSmall;
+    }
+    .author{
+        font-size: 1rem;
+        font-weight: 500;
+        text-align: left;
+        margin-bottom: $spaceLarge;
+        display: inline-block;
+    }
+    .article {
+        @include textContent-2;
+        line-height: 1.725rem;
+        font-size: $paragraphSize;
+        width: 96%;
+    }
+    .top {
+        margin-bottom: $spaceSmall;
+    }
+    .bottom {
+        margin-bottom: $spaceLarge;
+    }
+    @include mobile-lg {
+        .musicians{
+            &__head{
+                font-size: $sHeader;
+            }
+        }
+    }
+    @include tablet {
+        .musicians{
+            &__head{
+                font-size: $header;
+                margin-top: 4rem;
+                padding-left: $spaceSmall;
+            }
+            &__img{
+                height: 58vw;
+                padding-top: $spaceLarger;
+                padding-bottom: $spaceLarge;
+            }
+            &__wrap{
+                padding: 0 $spaceSmall;
+            }
+            &__quote{
+                font-size: 1.7rem;
+                line-height: 2.7rem;
+                font-weight: 900;
+                padding-bottom: $spaceSmall;
+                width: 98%;
+            }
+            &__head-2{
+                font-size: $sHeader;
+                font-weight: 800;
+            }
+        }
+        .author{
+            margin-bottom: $spaceXLarge;
+        }
+        .article-ctn {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: $spaceLarge;
+        }
+        .bottom{
+            margin: 0 $spaceSmall;
+        }
+    }
+    @include desktop-small{
+        .musicians{
+            &__head{
+                padding: 0 $spaceLarger;
+            }
+            &__img-ctn{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+            &__img{
+                width: 80%;
+                height: 49vw;
+            }
+            &__quote {
+                width: 90%;
+                padding-left: 6rem;
+            }
+            &__head-2{
+                font-size: 1.7rem;
+                padding: 0 0 $spaceLarger 6rem;
+                font-weight: 800;
+            }
+        }
+        .author {
+            padding-left: 6rem;
+            margin-bottom: $spaceLarger;
+        }
+        .article-ctn {
+            width: 85%;
+            padding: 0 0 0 6rem;
+            .top {
+                margin-right: $spaceLarge;
+            }
+            .bottom {
+                margin: 0;
+            }
+        }
+    }
+    @include desktop-lg {
+        .musicians{
+            &__head {
+                padding-left: 4.5rem;
+            }
+            &__img-ctn{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+            &__img{
+                width: 75%;
+                height: 45vw;
+            }
+            &__quote {
+                width: 90%;
+                padding-left: 9.5rem;
+            }
+            &__head-2{
+                font-size: 1.7rem;
+                padding: 0 0 $spaceLarger 9.5rem;
+                font-weight: 800;
+            }
+        }
+        .author {
+            padding-left: 9.5rem;
+            margin-bottom: $spaceLarger;
+        }
+        .article-ctn {
+            width: 85%;
+            padding: 0 0 0 9.5rem;
+        }
+        .bottom {
+            margin: 0 0 0 $spaceLarge;
+        }
+    }        
+}
+
+// Gallery Section Styles
+
+.gallery {
+    background-color: $alabaster;
+    margin-bottom: $spaceLarge;
+    &__wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 $spaceXSmall;
+    }
+    &__head{
+        @include header-2;
+        padding: $spaceMedium 0 $spaceSmall $spaceXSmall;
+    }
+    &__img{
+        width: 100%;
+        min-width: 288px;
+        height: 50vw;
+        margin-bottom: $spaceXSmall;
+    }
+    .img-1{
+        background-image: url('../assets/images/Photo-gallery-1.jpg');
+        @include imgGallery;
+    }
+    .img-2{
+        background-image: url('../assets/images/Photo-gallery-2.jpg');
+        @include imgGallery;
+    }
+    .img-3{
+        background-image: url('../assets/images/Photo-gallery-3.jpg');
+        @include imgGallery;
+    }
+    .img-4{
+        background-image: url('../assets/images/Photo-gallery-4.jpg');
+        @include imgGallery;
+    }
+    .img-5{
+        background-image: url('../assets/images/Photo-gallery-5.jpg');
+        @include imgGallery;
+    }
+    .img-6{
+        background-image: url('../assets/images/Photo-gallery-6.jpg');
+        @include imgGallery;
+    }
+    .img-7{
+        background-image: url('../assets/images/Photo-gallery-7.jpg');
+        @include imgGallery;
+    }
+    .img-8{
+        background-image: url('../assets/images/Photo-gallery-8.jpg');
+        @include imgGallery;
+    }
+    .img-9{
+        background-image: url('../assets/images/Photo-gallery-9.jpg');
+        @include imgGallery;
+    }
+    @include mobile-lg {
+        .gallery{
+            &__head{
+                font-size: $spaceMedium;
+            }
+        }
+    }
+    @include tablet {
+        .gallery{
+            &__head{
+                font-size: $header;
+                padding: 4rem 0 4rem $spaceSmall;
+            }
+            &__wrap{
+                flex-direction: row;
+                flex-wrap: wrap;
+                padding: 0 $spaceSmall;
+                justify-content: space-between;
+            }
+            &__img{
+                min-width: 224px;
+                width: 31%;
+                height: 16.5vw;
+                margin-bottom:$spaceSmall
+            }
+        }
+    }
+    @include desktop-small{
+        .gallery{
+            &__head {
+                padding: 4rem 0 4rem $spaceLarger;
+            }
+            &__wrap {
+                padding: 0 $spaceLarge;
+            }
+            &__img {
+                width: 32%;
+                height: 17.5vw;
+                margin-bottom: $spaceXSmall;
+                opacity: .5;
+                transition: all .3s ease-in-out;
+                &__hover{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    @include desktop-lg{
+        .gallery{
+            &__head{
+                padding: 4rem 0 4rem 4.5rem; 
+            }
+            &__wrap {
+                padding: 0 4.5rem;
+            }
+            &__img {
+                width: 32%;
+                opacity: .5;
+                transition: all .4s ease-in-out;
+                &:hover{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+// Comments Styles
+
+.comments {
+    &__head {
+        padding: 0 0 3.5rem 1rem;
+        font-size: 1.65rem;
+        font-weight: 900; 
+    }
+    &__ctn {
+        padding: 0 1rem 0 1rem;
+    }
+    &__form {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid $mercury;
+    }
+    .form-info-ctn {
+        padding-left: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+    &__title {
+        font-size: 1rem;
+        color: $silver;
+        text-transform: uppercase;
+        padding-bottom: .5rem;
+    }
+    &__name {
+        border: 1px solid $silver;
+        background: $alabaster;
+        border-radius: 5px;
+        padding: 15px 10px;
+        margin-bottom: 1.5rem;
+        &:focus{
+            border: 2px solid $black;
+        }
+    }
+    &__title-2 {
+        font-size: 1rem;
+        color: silver;
+        text-transform: uppercase;
+        padding-bottom: .5rem;
+    }
+    &__field {
+        border: 1px solid $silver;
+        background: $alabaster;
+        border-radius: 5px;
+        padding: 30px 10px;
+        margin-bottom: 1.5rem;
+        color: $black;
+        &:focus{
+            border: 2px solid $black;
+        }
+    }
+    &__btn {
+        padding: 20px 10px;
+        border-radius: 5px;
+        color: $white;
+        background-color: $primaryCTA;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+    }
+    .gen-comment {
+        display: flex;
+        flex-direction: row-reverse;
+        margin: 2rem 0 2rem 0;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid $mercury;
+        &__ctn {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: 1rem;
+        }
+    }
+    .users {
+        &__name {
+            font-weight: 800;
+            font-size: .9rem;
+            width: 70%;
+        }
+        &__time {
+            font-size: .8rem;
+            color: $silver;
+            font-weight: 100;
+            width: 26%;
+            display: flex;
+            justify-content: center;
+        }
+        &__comment {
+            padding-top: 1rem;
+            line-height: $mLabelLineHeight;
+        }
+    }
+    .user-image {
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+    }
+}
+@include tablet {
+    .comments{
+        &__ctn {
+            padding: 0 1rem 2rem 1rem;
+        }
+        .form-ctn{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__head {
+            padding: 0 0 3.5rem 1.5rem; 
+            font-size: 3rem;
+        }
+        &__form{
+          display: flex;
+          -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+          justify-content: flex-start;
+          border-bottom: 1px solid #E1E1E1;
+          width: 73vw;
+        }
+        &__field {
+          padding: 15px 0 60px 10px;
+        }
+        &__btn {
+          width: 185px;
+          margin-left: 17rem;
+          text-transform: uppercase;
+        }
+        .users{
+            &__name{
+                font-size: 1.2rem;
+              width: 40%;
+            }
+            &__time {
+                font-size: 1.1rem;
+                width: 32%;
+                justify-content: flex-start;
+            }
+            &__comment {
+                line-height: 1.7rem;
+                font-size: 1.2rem;
+            }
+        }
+      }
+      .img-ctn{
+        margin-right: 1rem;
+      }
+      .form-info-ctn {
+        width:95%
+      }
+      .user {
+          &__comments-ctn {
+              width: 73vw;
+              margin:0 auto;
+          }
+      }
+}
+@include desktop-lg {
+    .comments {
+        &__head {
+            padding: 0 0 3.5rem 3rem;
+        }
+        &__field {
+            padding: 15px 0 95px 10px;
+        }
+        &__btn {
+            margin-left: 37rem;
+            text-transform: uppercase;
+        }
+        .users{
+            &__name {
+                width: 25%;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,122 @@
+@import "variables";
+@import "global-styles";
+
+
+// Desktop & Tablet Text Mixins
+
+@mixin heroHead {
+    font-size: $heroHeader;
+    line-height: $heroLineHeight;
+    font-weight: $heroFontWeight;
+}
+
+@mixin heroHead-d {
+    font-size: $heroHead-d;
+    line-height: $heroHeadHeight-d;
+    font-weight: $heroHeadWeight-d;
+}
+
+@mixin header {
+    font-size:$header;
+    line-height: $headerLineHeight;
+    font-weight: $headerFontWeight;
+}
+
+@mixin secondHead {
+    font-size:$sHeader;
+    line-height:$sHeaderLineHeight;
+    font-weight:$sHeaderFontWeight;
+}
+
+@mixin subHead {
+    font-size:$subHeader;
+    line-height:$subHeaderHeight;
+    font-weight:$subHeaderFontWeight;
+}
+
+@mixin textContent {
+    font-size:$paragraphSize;
+    line-height:$paragraphHeight;
+    font-weight:$paragraphFontWeight;
+}
+
+@mixin footerContent {
+    font-size:$contactSize;
+    line-height:$contactLineHeight;
+    font-weight:$contactFontWeight;
+}
+
+@mixin footerText {
+    font-size:$labelSize;
+    line-height:$labelLineHeight;
+    font-weight:$labelFontWeight;
+}
+
+
+// Mobile Text Mixins
+
+@mixin header-2 {
+    font-size: $mHeaderSize;
+    line-height: $mHeaderLineHeight;
+    font-weight: $mHeaderFontWeight;
+}
+@mixin subHead-2{
+    font-size: $mSubHeaderSize;
+    line-height: $mSubHeaderLineHeight;
+    font-weight: $mSubHeaderFontWeight;
+}
+@mixin textContent-2{
+    font-size: $mParagraphSize;
+    line-height: $mParagraphLineHeight;
+    font-weight: $mParagraphFontWeight;
+}
+@mixin footerContent-2{
+    font-size: $mContactSize;
+    line-height: $mContactLineHeight;
+    font-weight: $mContactFontWeight;
+}
+// Nav Mixin
+
+@mixin navLink {
+    font-size: 1.25rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+    color: $silver;
+}
+
+// Img Gallery Mixin
+@mixin imgGallery {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+// Desktop & Tablet Breakpoint Mixins
+
+
+@mixin mobile-lg{
+    @media (min-width: $mobilelg-breakpoint) and (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: $tablet-breakpoint) {
+      @content;
+    }
+  }
+@mixin desktop-small{
+    @media(min-width: $desktop-small-breakpoint) and (max-width: 1199px) {
+        @content;
+    }
+}  
+
+  @mixin desktop {
+    @media (min-width: $desktop-breakpoint) {
+      @content;
+    }
+  }
+  @mixin desktop-lg {
+    @media (min-width: $desktop-lg-breakpoint) {
+      @content;
+    }
+  }

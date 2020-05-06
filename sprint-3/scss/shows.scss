@@ -1,0 +1,263 @@
+@import "../scss/partials/reset";
+@import "../scss/partials/variables";
+@import "../scss/partials/mixins";
+@import "../scss/partials/header";
+@import "../scss/partials/footer";
+
+
+.hero {
+    width: 100vw;
+    height: 147vw;
+    background-image: url('../assets/images/sebastiaan-stam-RChZT-JlI9g-unsplash.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    &__ctn {
+        padding: $spaceXSmall;
+        font-size: $subHeader;
+        height: inherit;
+        width: 100vw;
+        background-color: $black;
+        opacity: 50%;
+        position: absolute;
+        top: 6.4rem;
+        z-index: 1;
+        transition: opacity .4s ease-in-out;
+    }
+    &__head-2{
+        color: $white;
+        font-weight: 600;
+        opacity: 1;
+        z-index: 2;
+        position: relative;
+        padding: $spaceMedium $spaceXSmall 0 $spaceXSmall;
+    }
+    &__head-main {
+        font-size: 2.3rem;
+        color: $white;
+        opacity: 1;
+        z-index: 2;
+        padding: 0.6rem $spaceXSmall $spaceXSmall $spaceXSmall;
+        line-height: 3.5rem;
+        font-weight: 900;
+    }
+    .player-ctn {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+    }
+    &__player {
+        width: 91%;
+        height: 7.5rem;
+        z-index: 2;
+    }
+}
+@include mobile-lg {
+    .hero{
+        height: 118vw;
+        &__head-main {
+            font-size: $header;
+        }
+        &__player {
+            height: 8.5rem;
+        }
+    }
+}
+@include tablet {
+    .hero{
+        height: 88vw;
+        &__head-2 {
+            font-size: $mHeaderSize;
+            padding: 4rem $spaceXSmall 0 $spaceSmall;
+        }
+        &__head-main {
+            @include heroHead;
+            padding: $spaceSmall 1rem .8rem $spaceSmall;
+            width: 85%;
+        }
+        &__player {
+            width: 65%;
+            height: 10.5rem;
+        }
+        .player-ctn {
+            align-items: flex-start;
+            padding: 0 $spaceSmall;
+        }
+    }
+}
+@include desktop-small{
+    .hero {
+        height: 66vw;
+        &__head-2 {
+            padding: 9rem 0 .8rem $spaceLarger;
+        }
+        &__head-main {
+            font-size: 3.6rem;
+            padding-left: $spaceLarger;
+            width: 56%;
+        }
+        .player-ctn {
+            position: relative;
+            width: 39%;
+            left: 58%;
+            bottom: 30%;
+        }
+        &__player {
+            width: 100%;
+        }
+    }
+}
+
+@include desktop-lg {
+    .hero {
+        height: 56vw;
+        &__head-2 {
+            padding: 9rem 0 .8rem $spaceLarger;
+        }
+        &__head-main {
+            font-size: 3.6rem;
+            padding-left: $spaceLarger;
+            width: 51%;
+        }
+        .player-ctn {
+            position: relative;
+            width: 42%;
+            left: 55%;
+            bottom: 30%;
+        }
+        &__player {
+            width: 100%;
+        }
+    }
+}
+
+
+// Shows Info Styles
+
+.shows {
+    padding: $spaceMedium $spaceXSmall;
+    &__head {
+        font-size: 2rem;
+        font-weight: 800;
+        padding-bottom: $spaceLarger;
+    }
+    &__wrap{
+        display: flex;
+        flex-direction: column;
+    }
+    &__row {
+        border-bottom: 1.5px solid $silver;
+        margin-bottom: $spaceSmall;
+    }
+    &__date {
+        font-weight: 400;
+        color: $silver;
+        font-size: 1.2rem;
+        padding-bottom: $spaceXSmall;
+    }
+    &__dates {
+        font-size: 1.25rem;
+        font-weight: 500;
+        padding-bottom: $spaceSmall;
+    }
+    &__venue {
+        font-weight: 400;
+        color: $silver;
+        font-size: 1.2rem;
+        padding-bottom: $spaceXSmall;
+    }
+    &__venues {
+        padding-bottom: $spaceSmall;
+    }
+    &__location {
+        font-weight: 400;
+        color: $silver;
+        font-size: 1.2rem;
+        padding-bottom: $spaceXSmall
+    }
+    &__locations {
+        padding-bottom: $spaceSmall;
+    }
+    &__btn {
+        display: flex;
+        justify-content: center;
+        margin-top: 1.2rem;
+        background-color: black;
+        color: white;
+        padding: 21px 0;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        font-weight: 500;
+        margin-bottom: $spaceXSmall;
+    }
+    
+}
+@include tablet {
+    .shows {
+        padding: $spaceMedium $spaceSmall;
+        &__row {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: $spaceMedium;
+        }
+        &__dates {
+            font-size: 1.1rem;
+            font-weight: 600;
+            padding-bottom: $spaceSmall;
+        }
+        &__btn{
+            margin-top: 1.2rem;
+            background-color: black;
+            color: white;
+            padding: 14px 0px;
+            font-size: 1rem;
+            display: flex;
+            width: 185px;
+            height: 50px;
+            align-items: center;
+        }
+        .date-ctn{
+            margin-bottom: $spaceSmall;
+        }
+        .venue-ctn{
+            margin-bottom: $spaceSmall;
+        }
+        .location-ctn{
+            margin-bottom: $spaceSmall;
+        }
+    }
+    .s-1 {
+        padding:  0 0 $spaceLarger 0;
+    }
+    .s-2 {
+        visibility: hidden;;
+    }
+    .shows{
+        &__row:nth-of-type(1){
+            align-items: center;
+        }
+    }     
+}
+@include desktop-lg {
+    .shows {
+        display: flex;
+        padding: $spaceMedium $spaceLarger;
+        &__wrap {
+            width:79%;
+            padding-top: $spaceXSmall;
+        }
+        &__head {
+            font-size: 2.5rem;
+            margin-right: 6rem;
+            padding-top: $spaceSmall;
+        }
+    }
+} 
