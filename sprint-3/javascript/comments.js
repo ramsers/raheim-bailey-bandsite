@@ -30,17 +30,16 @@ let getPromise = () => {
     // console.log(usersData);
 
     let newUsersData = JSON.parse(usersData);
+
+   
     console.log(newUsersData);
+    // console.log(newUserData);
 
     newUsersData.forEach((item) => {
         let commentSpace = displayComment(item);
         userCommentCtn.prepend(commentSpace);
     }) 
 })
-// .then(() => {
-//     let userSpace = document.querySelector(".user__comments-ctn");
-//     userSpace.innerHTML = "";
-// })
 .catch(error => {
     console.log("you didnt get the data", error)
 })
@@ -88,10 +87,10 @@ commentForm.addEventListener('submit', e => {
     let userSpace = document.querySelector(".user__comments-ctn");
     userSpace.innerHTML = "";
     // Define an array with image fil paths
-    // let ranUserImg = ['../../assets/images/puppy-3.jpg', '../../assets/images/puppy-4.jpg',
-    // '../../assets/images/puppy-5.jpg', '../../assets/images/cat-1.jpg', '../../assets/images/cat-2.jpg',
-    // '../../assets/images/cat-3.jpg'    
-    // ];
+    let ranUserImg = ['./assets/images/puppy-3.jpg', './assets/images/puppy-4.jpg',
+    './assets/images/puppy-5.jpg', './assets/images/cat-1.jpg', './assets/images/cat-2.jpg',
+    './assets/images/cat-3.jpg'    
+    ];
     // write a function that takes the image array and runs Math.'' to select a random image
     // Function will return the image
     ranImg = (imgArr) => {
@@ -100,16 +99,20 @@ commentForm.addEventListener('submit', e => {
     
     let newUser = e.target.userName.value;
     let newComment = e.target.userVoice.value;
+    let userImage =ranImg(ranUserImg);
 
     axios
     .post('https://project-1-api.herokuapp.com/comments?api_key=7424395f-e2a4-4e35-b456-c800d11c2d63',{
             "name": newUser,
             "comment": newComment,
+            // "image": userImage
             })
             
             .then(result => {
                 
                 let newCommentData = result.data;
+
+                
                 
                 let commentSpace = displayComment(newCommentData);
                 userCommentCtn.prepend(commentSpace);
@@ -117,28 +120,6 @@ commentForm.addEventListener('submit', e => {
             event.target.reset();
             getPromise();    
         });
-
-
-
-// const images = [
-//     {
-    
-//      pic: '../../assets/images/spirit-animal-1.jpg'
-//     },
-//     {
-   
-//      pic: '../../assets/images/puppy-2.jpg'   
-//     },
-//     {
-   
-//      pic: '../../assets/images/puppy-1.jpg'
-//     }
-// ];
-
-
-
-
-
 
 
 // Generate Comments HTML
@@ -177,12 +158,22 @@ let displayComment = (newUsersData) => {
     commentInfoCtn.appendChild(userComment);
     commentSpace.appendChild(commentInfoCtn);
 
-    
-    userImage.src = newUsersData.pic;
+
+    const images = [
+        '././assets/images/spirit-animal-1.jpg'
+       ,  
+        '././assets/images/puppy-2.jpg'   
+       ,
+        '././assets/images/puppy-1.jpg'
+   ];
+
+   for(let i = 1; i < images.length; i++) {
+    userImage.src = images[i++];
     userImage.classList.add("user-image");
     imageCtn.classList.add("img-ctn");
     imageCtn.appendChild(userImage);
     commentSpace.appendChild(imageCtn);
+   }
 
     return commentSpace;
 }
