@@ -117,17 +117,13 @@
         margin-bottom: $spaceLarge;
         display: inline-block;
     }
-    .article {
+    &__article {
         @include textContent-2;
         line-height: 1.725rem;
         font-size: $paragraphSize;
         width: 96%;
-    }
-    .top {
-        margin-bottom: $spaceSmall;
-    }
-    .bottom {
-        margin-bottom: $spaceLarge;
+        margin-right: 5.5rem;
+        margin-bottom: $spaceMedium;
     }
     @include mobile-lg {
         .musicians{
@@ -162,18 +158,22 @@
                 font-size: $sHeader;
                 font-weight: 800;
             }
+            &__article-ctn {
+                display: flex;
+                flex-direction: row;
+                margin-bottom: $spaceLarge;
+            }
+            &__article {
+                margin-right:1.5rem;
+            }
         }
         .author{
             margin-bottom: $spaceXLarge;
         }
-        .article-ctn {
-            display: flex;
-            flex-direction: row;
-            margin-bottom: $spaceLarge;
-        }
-        .bottom{
-            margin: 0 $spaceSmall;
-        }
+       
+        // .bottom{
+        //     margin: 0 $spaceSmall;
+        // }
     }
     @include desktop-small{
         .musicians{
@@ -203,7 +203,7 @@
             padding-left: 6rem;
             margin-bottom: $spaceLarger;
         }
-        .article-ctn {
+        .musicians__article-ctn {
             width: 85%;
             padding: 0 0 0 6rem;
             .top {
@@ -242,7 +242,7 @@
             padding-left: 9.5rem;
             margin-bottom: $spaceLarger;
         }
-        .article-ctn {
+        .musicians__article-ctn {
             width: 85%;
             padding: 0 0 0 9.5rem;
         }
@@ -273,42 +273,42 @@
         height: 50vw;
         margin-bottom: $spaceXSmall;
     }
-    .img-1{
-        background-image: url('../assets/images/Photo-gallery-1.jpg');
-        @include imgGallery;
-    }
-    .img-2{
-        background-image: url('../assets/images/Photo-gallery-2.jpg');
-        @include imgGallery;
-    }
-    .img-3{
-        background-image: url('../assets/images/Photo-gallery-3.jpg');
-        @include imgGallery;
-    }
-    .img-4{
-        background-image: url('../assets/images/Photo-gallery-4.jpg');
-        @include imgGallery;
-    }
-    .img-5{
-        background-image: url('../assets/images/Photo-gallery-5.jpg');
-        @include imgGallery;
-    }
-    .img-6{
-        background-image: url('../assets/images/Photo-gallery-6.jpg');
-        @include imgGallery;
-    }
-    .img-7{
-        background-image: url('../assets/images/Photo-gallery-7.jpg');
-        @include imgGallery;
-    }
-    .img-8{
-        background-image: url('../assets/images/Photo-gallery-8.jpg');
-        @include imgGallery;
-    }
-    .img-9{
-        background-image: url('../assets/images/Photo-gallery-9.jpg');
-        @include imgGallery;
-    }
+    // .img-1{
+    //     background-image: url('../assets/images/Photo-gallery-1.jpg');
+    //     @include imgGallery;
+    // }
+    // .img-2{
+    //     background-image: url('../assets/images/Photo-gallery-2.jpg');
+    //     @include imgGallery;
+    // }
+    // .img-3{
+    //     background-image: url('../assets/images/Photo-gallery-3.jpg');
+    //     @include imgGallery;
+    // }
+    // .img-4{
+    //     background-image: url('../assets/images/Photo-gallery-4.jpg');
+    //     @include imgGallery;
+    // }
+    // .img-5{
+    //     background-image: url('../assets/images/Photo-gallery-5.jpg');
+    //     @include imgGallery;
+    // }
+    // .img-6{
+    //     background-image: url('../assets/images/Photo-gallery-6.jpg');
+    //     @include imgGallery;
+    // }
+    // .img-7{
+    //     background-image: url('../assets/images/Photo-gallery-7.jpg');
+    //     @include imgGallery;
+    // }
+    // .img-8{
+    //     background-image: url('../assets/images/Photo-gallery-8.jpg');
+    //     @include imgGallery;
+    // }
+    // .img-9{
+    //     background-image: url('../assets/images/Photo-gallery-9.jpg');
+    //     @include imgGallery;
+    // }
     @include mobile-lg {
         .gallery{
             &__head{
