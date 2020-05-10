@@ -48,27 +48,27 @@ let rowGen = () => {
 
     axios.get('https://project-1-api.herokuapp.com/showdates?api_key=7424395f-e2a4-4e35-b456-c800d11c2d63')
     .then(result=> {
-        console.log("got Show dates", result.data);
+        // console.log("got Show dates", result.data);
         let showsData = result.data;
-        console.log(showsData);
+        // console.log(showsData);
     
         let show1=showsData[0];
-        console.log(show1);
+        // console.log(show1);
 
         let show2 = showsData[1];
-        console.log(show2);
+        // console.log(show2);
 
         let show3 = showsData[2];
-        console.log(show3);
+        // console.log(show3);
 
         let show4 = showsData[3];
-        console.log(show4);
+        // console.log(show4);
 
         let show5 = showsData[4];
-        console.log(show5);
+        // console.log(show5);
 
         let show6 = showsData[5];
-        console.log(show6);
+        // console.log(show6);
 
 
         shows.forEach(() => {
@@ -258,7 +258,8 @@ let rowGen = () => {
         });
     })
     .catch(error => {
-        console.error("no show date", error);
+        // console.error("no show date", error);
+        return `no show date ${error}`;
     })
 
     

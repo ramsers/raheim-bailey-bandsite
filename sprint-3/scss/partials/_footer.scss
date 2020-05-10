@@ -1,49 +1,49 @@
 @import "reset";
 // Footer Section Styles   
-.intouch {
+.footer {
     width: 100vw;
     background-color: $black;
     color: $white;
     padding-top: $spaceXLarge;
     padding-bottom: $spaceLarge; 
-    .footer-head {
+    &__head {
         @include header-2;
         color:$white;
         font-size: $sHeader;
         padding: 0 0 $spaceMedium $spaceXSmall;
     }
-    .footer-wrap{
-        padding: 0 $spaceXSmall;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-    .icon {
+    &__icons {
         color: $white;
         height: $mHeaderSize;
         margin-right: $spaceXSmall;
         margin-bottom: $spaceLarge;
         padding: 0 $spaceXSmall;
     }
-    .footer-logo {
+    &__logo {
         display: none;
     }
-    .contact-head{
+    &__wrap{
+        padding: 0 $spaceXSmall;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    &__contact-head{
         color: $white;
         font-size: $subHeader;
         font-weight: 500;
         line-height: $subHeaderHeight;
     }
-    .contact-item{
+    &__contact-item{
         color: $silver;
         width: 65%;
         line-height: $subHeaderHeight;
         padding: $spaceSmall 0 $spaceSmall 0;
     }
-    .contact-link{
+    &__contact-link{
         padding-bottom: $spaceLarge;
     }
-    .contact-email{
+    &__contact-email{
         color: $silver;
         font-size: $contactSize;
     }
@@ -54,86 +54,91 @@
         padding: 0 $spaceXSmall;
     }
     @include mobile-lg {
-        .footer-head{
-            font-size: $header;
+        .footer{
+            &__head{
+                font-size: $header;
+            }
         }
-        .contact-head {
+        &__contact-head {
             font-size: 1.15rem;
             font-weight: 500;
         }
     }
     @include tablet {
-        .footer-head{
-            display: inline-block;
-            font-size: 2.5rem;
-            padding: 0 0.5rem $spaceMedium $spaceSmall;
-        }
-        .social-icons{
-            display: inline-flex;
+        .footer{
+            &__head{
+                display: inline-block;
+                font-size: 2.5rem;
+                padding: 0 0.5rem $spaceMedium $spaceSmall;
+            }
+            &__icons {
+                display: inline-flex;
             flex-direction: row;
             align-items: baseline;
             width: 62%;
             justify-content: space-between;
-            .social-ctn {
+            }
+            &__icons-ctn {
                 display: flex;
                 margin-left: $spaceXSmall; 
                 .icon{
                     margin-right: 0;
                 }
+              } 
+            &__logo {
+                display: flex;
             }
-        }
-        .footer-logo {
-            display: flex;
-        }
-        .footer-wrap{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            padding: $spaceMedium $spaceXSmall 0 $spaceSmall;
-            .contact-head {
+            &__wrap{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                padding: $spaceMedium $spaceXSmall 0 $spaceSmall;
+            } 
+            &__contact-head {
                 font-size:1rem;
             }
-            .contact-item {
+            &__contact-item {
                 width: 200px;
             }
-            .contact-list {
+            &__contact-list {
                 width: 32%;
                 margin-right: -15px;
             }
         }
+       
+       
         .copyright {
             padding: 0 $spaceSmall;
         }  
     }
     @include desktop-small {
-        .footer-head {
-            padding: 0 $spaceXSmall $spaceMedium $spaceLarge;
-        }
-        .contact-head {
-            font-size: 1.2rem !important;
-            font-weight: 500;
-        }
-        .social-icons{
-            justify-content: space-between;
-            width: 68%;
-            .social-ctn {
+        .footer{
+            &__head {
+                padding: 0 $spaceXSmall $spaceMedium $spaceLarge;
+            }
+            &__icons-ctn {
                 display: flex;
                 margin-left: $spaceXSmall;
                 .icon {
                     margin-right: 0;
                 }
+              }
+            &__logo {
+                height: 1.3rem;
+              }  
             }
-        }
-        .footer-logo {
-            height: 1.3rem;
-        }
-        .footer-wrap {
-            padding: $spaceSmall $spaceXSmall 0 $spaceLarge;
-            width: 90%;
-            .contact-list {
+            &__wrap {
+                padding: $spaceSmall $spaceXSmall 0 $spaceLarge;
+                width: 90%;
+            }
+            &__contact-list {
                 width: 31%;
             }
-            .contact-item {
+            &__contact-head {
+                font-size: 1.2rem !important;
+                font-weight: 500;
+            }
+            &__contact-item {
                 width: 200px !important;
             }
         }
@@ -142,38 +147,39 @@
        } 
     }
     @include desktop-lg {
-        .footer-head {
-            padding: 0 0 $spaceMedium 4.5rem;
-        }
-        .footer-logo {
-            height: 1.3rem;
-        }
-        .footer-wrap{
-            padding: $spaceSmall $spaceXSmall 0 4.5rem;
-            width: 90%;
-            .contact-head {
-                font-size: 1.2rem;
+        .footer{
+            &__head {
+                padding: 0 0 $spaceMedium 4.5rem;
             }
-            .contact-list {
-                width: 31%;
-            }
-            .contact-item {
-                width: 200px !important;
-            }
-        }
-        .social-icons{
-            justify-content: space-between;
+            &__icons {
+                justify-content: space-between;
             width: 69%;
-            .social-ctn {
+            &__icon-ctn {
                 display: flex;
                 margin-left: 5rem;
                 .icon {
                     margin-right: 0;
                 }
+              }
+            }
+            &__logo {
+                height: 1.3rem;
+            }
+            &__wrap {
+                padding: $spaceSmall $spaceXSmall 0 4.5rem;
+                width: 90%;
+            }
+            &__contact-head {
+                font-size: 1.2rem;
+            }
+            &__contact-list {
+                width: 31%;
+            }
+            &__contact-item {
+                width: 200px !important;
             }
         }
         .copyright{
             padding: 0 4.5rem;
         } 
     }
-}

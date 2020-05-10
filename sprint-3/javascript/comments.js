@@ -24,16 +24,10 @@ let submitBtn  = document.querySelector(".comments__btn");
 let getPromise = () => {
  return  axios.get('https://project-1-api.herokuapp.com/comments?api_key=7424395f-e2a4-4e35-b456-c800d11c2d63')
 .then(response => {
-    console.log("you got it:", response.data);
 
     let usersData = JSON.stringify(response.data);
-    // console.log(usersData);
 
     let newUsersData = JSON.parse(usersData);
-
-   
-    console.log(newUsersData);
-    // console.log(newUserData);
 
     newUsersData.forEach((item) => {
         let commentSpace = displayComment(item);
@@ -41,7 +35,7 @@ let getPromise = () => {
     }) 
 })
 .catch(error => {
-    console.log("you didnt get the data", error)
+    alert("you didnt get the data", error);
 })
 }
 
@@ -59,7 +53,7 @@ let formImageCtn = document.createElement("div");
 formImageCtn.classList.add("img-ctn");
 let formImage = document.createElement("img");
 formImage.classList.add("user-image");
-formImage.src = "../../assets/images/Mohan-muruge.jpg"
+formImage.src = "././assets/images/Mohan-muruge.jpg"
 formImageCtn.appendChild(formImage);
 commentForm.appendChild(formImageCtn);
 
