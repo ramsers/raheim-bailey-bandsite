@@ -273,42 +273,6 @@
         height: 50vw;
         margin-bottom: $spaceXSmall;
     }
-    // .img-1{
-    //     background-image: url('../assets/images/Photo-gallery-1.jpg');
-    //     @include imgGallery;
-    // }
-    // .img-2{
-    //     background-image: url('../assets/images/Photo-gallery-2.jpg');
-    //     @include imgGallery;
-    // }
-    // .img-3{
-    //     background-image: url('../assets/images/Photo-gallery-3.jpg');
-    //     @include imgGallery;
-    // }
-    // .img-4{
-    //     background-image: url('../assets/images/Photo-gallery-4.jpg');
-    //     @include imgGallery;
-    // }
-    // .img-5{
-    //     background-image: url('../assets/images/Photo-gallery-5.jpg');
-    //     @include imgGallery;
-    // }
-    // .img-6{
-    //     background-image: url('../assets/images/Photo-gallery-6.jpg');
-    //     @include imgGallery;
-    // }
-    // .img-7{
-    //     background-image: url('../assets/images/Photo-gallery-7.jpg');
-    //     @include imgGallery;
-    // }
-    // .img-8{
-    //     background-image: url('../assets/images/Photo-gallery-8.jpg');
-    //     @include imgGallery;
-    // }
-    // .img-9{
-    //     background-image: url('../assets/images/Photo-gallery-9.jpg');
-    //     @include imgGallery;
-    // }
     @include mobile-lg {
         .gallery{
             &__head{
@@ -396,6 +360,7 @@
         padding-left: 1rem;
         display: flex;
         flex-direction: column;
+        width: 80%;
     }
     &__title {
         font-size: 1rem;
@@ -437,6 +402,10 @@
         background-color: $primaryCTA;
         margin-bottom: 2rem;
         text-transform: uppercase;
+        min-width: 212px;
+        display: flex;
+        align-self: flex-end;
+        justify-content: center;    
     }
     .gen-comment {
         display: flex;
@@ -449,6 +418,7 @@
             display: flex;
             flex-wrap: wrap;
             margin-left: 1rem;
+            width: 100%;
         }
     }
     .users {
@@ -468,6 +438,7 @@
         &__comment {
             padding-top: 1rem;
             line-height: $mLabelLineHeight;
+            width: 90%;
         }
     }
     .user-image {
@@ -552,7 +523,7 @@
         }
         .users{
             &__name {
-                width: 25%;
+                width: 45%;
             }
         }
     }

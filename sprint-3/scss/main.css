@@ -920,6 +920,7 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 80%;
 }
 
 .comments__title {
@@ -968,6 +969,15 @@ a {
   background-color: #323232;
   margin-bottom: 2rem;
   text-transform: uppercase;
+  min-width: 212px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .comments .gen-comment {
@@ -993,6 +1003,7 @@ a {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-left: 1rem;
+  width: 100%;
 }
 
 .comments .users__name {
@@ -1017,6 +1028,7 @@ a {
 .comments .users__comment {
   padding-top: 1rem;
   line-height: 1.25rem;
+  width: 90%;
 }
 
 .comments .user-image {
@@ -1107,7 +1119,7 @@ a {
     text-transform: uppercase;
   }
   .comments .users__name {
-    width: 25%;
+    width: 45%;
   }
 }
 /*# sourceMappingURL=main.css.map */
