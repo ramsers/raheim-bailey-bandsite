@@ -48,28 +48,20 @@ let rowGen = () => {
 
     axios.get('https://project-1-api.herokuapp.com/showdates?api_key=7424395f-e2a4-4e35-b456-c800d11c2d63')
     .then(result=> {
-        // console.log("got Show dates", result.data);
+        
         let showsData = result.data;
-        // console.log(showsData);
     
         let show1=showsData[0];
-        // console.log(show1);
 
         let show2 = showsData[1];
-        // console.log(show2);
 
         let show3 = showsData[2];
-        // console.log(show3);
 
         let show4 = showsData[3];
-        // console.log(show4);
 
         let show5 = showsData[4];
-        // console.log(show5);
 
         let show6 = showsData[5];
-        // console.log(show6);
-
 
         shows.forEach(() => {
             let divCreate = document.createElement("div");
@@ -106,7 +98,6 @@ let rowGen = () => {
             divCreate.appendChild(dateCtn);
             divCreate.appendChild(venueCtn);
             divCreate.appendChild(locationCtn);
-            // labelCreate1.after(dateCreate1);
             
             let buyTicket = document.createElement("a");
             buyTicket.classList.add("shows__btn");
@@ -114,7 +105,6 @@ let rowGen = () => {
             buyTicket.innerText = "Buy Tickets";
             divCreate.appendChild(buyTicket);
             
-           
         });
         // Generate and Set show Date Info
     
@@ -143,26 +133,27 @@ let rowGen = () => {
         let datesCreate6 = document.createElement("h4");
         datesCreate6.innerText = show6.date;
         datesCreate6.classList.add("shows__dates");
-    // For each tp set dates in appropriate place and add utility class
-        showsrow.forEach(()=> {
-            showsrow[0].after(datesCreate1);
-            showsrow[0].classList.add("s-1");
-    
-            showsrow[1].after(datesCreate2);
-            showsrow[1].classList.add("s-2");
-    
-            showsrow[2].after(datesCreate3);
-            showsrow[2].classList.add("s-2");
-    
-            showsrow[3].after(datesCreate4);
-            showsrow[3].classList.add("s-2");
-    
-            showsrow[4].after(datesCreate5);
-            showsrow[4].classList.add("s-2");
-    
-            showsrow[5].after(datesCreate6);
-            showsrow[5].classList.add("s-2");
-        });
+    // For loop to set dates in appropriate place and add utility class
+
+    for (let i = 0; i < showsrow.length; i++) {
+        showsrow[0].after(datesCreate1);
+        showsrow[0].classList.add("s-1");
+
+        showsrow[1].after(datesCreate2);
+        showsrow[1].classList.add("s-2");
+
+        showsrow[2].after(datesCreate3);
+        showsrow[2].classList.add("s-2");
+
+        showsrow[3].after(datesCreate4);
+        showsrow[3].classList.add("s-2");
+
+        showsrow[4].after(datesCreate5);
+        showsrow[4].classList.add("s-2");
+
+        showsrow[5].after(datesCreate6);
+        showsrow[5].classList.add("s-2");
+    }
     
         // Generate and set Venue info
         let showsVenue = document.querySelectorAll(".shows__venue");
@@ -187,11 +178,12 @@ let rowGen = () => {
         showsVenue5.classList.add("shows__venues");
     
         let showsVenue6 = document.createElement("p");
-        showsVenue6.innerText = show6.place;
+        showsVenue6.innerText = show6.place; 
         showsVenue6.classList.add("shows__venues");
     
-        // For each to put venue in proper place and add secondary utlity class for desktop versions
-        showsVenue.forEach(() => {
+        // For loop to put venue in proper place and add secondary utlity class for desktop versions
+        
+        for(let i = 0; i < showsVenue.length; i++) {
             showsVenue[0].after(showsVenue1);
             showsVenue[0].classList.add("s-1");
     
@@ -209,7 +201,7 @@ let rowGen = () => {
     
             showsVenue[5].after(showsVenue6);
             showsVenue[5].classList.add("s-2");
-        });
+        }
     
         let showsLocationHold = document.querySelectorAll(".shows__location");
         let locationText1 = document.createElement("p");
@@ -235,35 +227,35 @@ let rowGen = () => {
         let locationText6 = document.createElement("p");
             locationText6.classList.add("shows__locations");
             locationText6.innerText = show6.location;
-            // For each to generate show locations adding utility classes
-        showsLocationHold.forEach(()=> {
-    
-            showsLocationHold[0].after(locationText1);
-            showsLocationHold[0].classList.add("s-1");
-    
-            showsLocationHold[1].after(locationText2);
-            showsLocationHold[1].classList.add("s-2");
-    
-            showsLocationHold[2].after(locationText3);
-            showsLocationHold[2].classList.add("s-2");
-    
-            showsLocationHold[3].after(locationText4);
-            showsLocationHold[3].classList.add("s-2");
-    
-            showsLocationHold[4].after(locationText5);
-            showsLocationHold[4].classList.add("s-2");
-    
-            showsLocationHold[5].after(locationText6);
-            showsLocationHold[5].classList.add("s-2");
-        });
+
+            // For loop to generate show locations adding utility classes
+
+            for (let i = 0; i < showsLocationHold.length; i++) {
+                showsLocationHold[0].after(locationText1);
+                showsLocationHold[0].classList.add("s-1");
+        
+                showsLocationHold[1].after(locationText2);
+                showsLocationHold[1].classList.add("s-2");
+        
+                showsLocationHold[2].after(locationText3);
+                showsLocationHold[2].classList.add("s-2");
+        
+                showsLocationHold[3].after(locationText4);
+                showsLocationHold[3].classList.add("s-2");
+        
+                showsLocationHold[4].after(locationText5);
+                showsLocationHold[4].classList.add("s-2");
+        
+                showsLocationHold[5].after(locationText6);
+                showsLocationHold[5].classList.add("s-2");
+            }
     })
     .catch(error => {
-        // console.error("no show date", error);
         return `no show date ${error}`;
-    })
-
-    
+    }) 
 }
+
+
 rowGen();
 
 

@@ -15,6 +15,18 @@
     display: flex;
         flex-direction: column;
         align-items: flex-start;
+        @include mobile-lg {
+            height: 118vw;
+        }
+        @include tablet {
+            height: 88vw;
+        }
+        @include desktop-small {
+            height: 66vw;
+        }
+        @include desktop-lg {
+            height: 56vw;
+        }
     &__ctn {
         padding: $spaceXSmall;
         font-size: $subHeader;
@@ -34,6 +46,16 @@
         z-index: 2;
         position: relative;
         padding: $spaceMedium $spaceXSmall 0 $spaceXSmall;
+        @include tablet {
+            font-size: $mHeaderSize;
+            padding: 4rem $spaceXSmall 0 $spaceSmall;
+        }
+        @include desktop-small {
+            padding: 9rem 0 .8rem $spaceLarger;
+        }
+        @include desktop-lg {
+            padding: 9rem 0 .8rem $spaceLarger;
+        }
     }
     &__head-main {
         font-size: 2.3rem;
@@ -43,6 +65,24 @@
         padding: 0.6rem $spaceXSmall $spaceXSmall $spaceXSmall;
         line-height: 3.5rem;
         font-weight: 900;
+        @include mobile-lg {
+            font-size: $header;
+        }
+        @include tablet {
+            @include heroHead;
+            padding: $spaceSmall 1rem .8rem $spaceSmall;
+            width: 85%;
+        }
+        @include desktop-small {
+            font-size: 3.6rem;
+            padding-left: $spaceLarger;
+            width: 56%;
+        }
+        @include desktop-lg {
+            font-size: 3.6rem;
+            padding-left: $spaceLarger;
+            width: 51%;
+        }
     }
     .player-ctn {
         width: 100%;
@@ -51,138 +91,156 @@
         justify-content: center;
         align-items: center;
         z-index: 2;
-    }
-    &__player {
-        width: 91%;
-        height: 7.5rem;
-        z-index: 2;
-    }
-}
-@include mobile-lg {
-    .hero{
-        height: 118vw;
-        &__head-main {
-            font-size: $header;
-        }
-        &__player {
-            height: 8.5rem;
-        }
-    }
-}
-@include tablet {
-    .hero{
-        height: 88vw;
-        &__head-2 {
-            font-size: $mHeaderSize;
-            padding: 4rem $spaceXSmall 0 $spaceSmall;
-        }
-        &__head-main {
-            @include heroHead;
-            padding: $spaceSmall 1rem .8rem $spaceSmall;
-            width: 85%;
-        }
-        &__player {
-            width: 65%;
-            height: 10.5rem;
-        }
-        .player-ctn {
+        @include tablet {
             align-items: flex-start;
             padding: 0 $spaceSmall;
         }
-    }
-}
-@include desktop-small{
-    .hero {
-        height: 66vw;
-        &__head-2 {
-            padding: 9rem 0 .8rem $spaceLarger;
-        }
-        &__head-main {
-            font-size: 3.6rem;
-            padding-left: $spaceLarger;
-            width: 56%;
-        }
-        .player-ctn {
+        @include desktop-small {
             position: relative;
             width: 39%;
             left: 58%;
             bottom: 30%;
         }
-        &__player {
-            width: 100%;
-        }
-    }
-}
-
-@include desktop-lg {
-    .hero {
-        height: 56vw;
-        &__head-2 {
-            padding: 9rem 0 .8rem $spaceLarger;
-        }
-        &__head-main {
-            font-size: 3.6rem;
-            padding-left: $spaceLarger;
-            width: 51%;
-        }
-        .player-ctn {
+        @include desktop-lg {
             position: relative;
             width: 42%;
             left: 55%;
             bottom: 30%;
         }
-        &__player {
+    }
+    &__player {
+        width: 91%;
+        height: 7.5rem;
+        z-index: 2;
+        @include mobile-lg {
+            height: 8.5rem;
+        }
+        @include tablet {
+            width: 65%;
+            height: 10.5rem;
+        }
+        @include desktop-small {
+            width: 100%;
+        }
+        @include desktop-lg {
             width: 100%;
         }
     }
 }
+
+
+
 
 
 // Shows Info Styles
 
 .shows {
     padding: $spaceMedium $spaceXSmall;
+    @include tablet {
+        padding: $spaceMedium $spaceSmall;
+    }
+    @include desktop-lg {
+        display: flex;
+        padding: $spaceMedium $spaceLarger;
+    }
     &__head {
         font-size: 2rem;
         font-weight: 800;
         padding-bottom: $spaceLarger;
+        @include desktop-lg {
+            font-size: 2.5rem;
+            margin-right: 3rem;
+            padding-top: $spaceSmall;
+        }
     }
     &__wrap{
         display: flex;
         flex-direction: column;
+        @include desktop-lg {
+        display: flex;
+        padding: $spaceMedium $spaceLarger;
+        width: 85%;
+        }
     }
     &__row {
         border-bottom: 1.5px solid $silver;
         margin-bottom: $spaceSmall;
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: $spaceMedium;
+        }
+    }
+    .date-ctn {
+        @include tablet {
+            margin-bottom: $spaceSmall;
+            width: 14%;
+        }
     }
     &__date {
         font-weight: 400;
         color: $silver;
         font-size: 1.2rem;
         padding-bottom: $spaceXSmall;
+        text-transform: uppercase;
     }
     &__dates {
         font-size: 1.25rem;
         font-weight: 500;
         padding-bottom: $spaceSmall;
+        @include tablet {
+            font-size: .9rem;
+            font-weight: 600;
+            padding-bottom: $spaceSmall;
+        }
+        @include desktop-lg {
+            font-size: 1.1rem;
+        }
+    }
+    .venue-ctn {
+        @include tablet {
+            margin-bottom: $spaceSmall;
+            width: 20%;
+        }
+        @include desktop-lg {
+            width: 31%;
+        }
     }
     &__venue {
         font-weight: 400;
         color: $silver;
         font-size: 1.2rem;
         padding-bottom: $spaceXSmall;
+        text-transform: uppercase;
     }
     &__venues {
         padding-bottom: $spaceSmall;
+        @include tablet {
+            font-size: .9rem;
+        }
     }
     &__location {
         font-weight: 400;
         color: $silver;
         font-size: 1.2rem;
-        padding-bottom: $spaceXSmall
+        padding-bottom: $spaceXSmall;
+        text-transform: uppercase;
+    }
+    .location-ctn {
+        @include tablet {
+            margin-bottom: $spaceSmall;
+            width: 26%;
+        }
+        @include desktop-lg {
+            width: 27%;
+        }
     }
     &__locations {
         padding-bottom: $spaceSmall;
+        @include tablet {
+            font-size: .9rem;
+        }
     }
     &__btn {
         display: flex;
@@ -196,27 +254,8 @@
         text-transform: uppercase;
         font-weight: 500;
         margin-bottom: $spaceXSmall;
-    }
-    
-}
-@include tablet {
-    .shows {
-        padding: $spaceMedium $spaceSmall;
-        &__row {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            margin-bottom: $spaceMedium;
-        }
-        &__dates {
-            font-size: 1.1rem;
-            font-weight: 600;
-            padding-bottom: $spaceSmall;
-        }
-        &__btn{
+        @include tablet {
             margin-top: 1.2rem;
-            background-color: black;
-            color: white;
             padding: 14px 0px;
             font-size: 1rem;
             display: flex;
@@ -224,40 +263,24 @@
             height: 50px;
             align-items: center;
         }
-        .date-ctn{
-            margin-bottom: $spaceSmall;
-        }
-        .venue-ctn{
-            margin-bottom: $spaceSmall;
-        }
-        .location-ctn{
-            margin-bottom: $spaceSmall;
-        }
     }
     .s-1 {
-        padding:  0 0 $spaceLarger 0;
+        @include tablet {
+            padding:  0 0 $spaceLarger 0;
+        }
     }
     .s-2 {
-        visibility: hidden;;
+        @include tablet {
+            visibility: hidden;
+        }
     }
+}
+@include tablet {
     .shows{
         &__row:nth-of-type(1){
             align-items: center;
         }
     }     
 }
-@include desktop-lg {
-    .shows {
-        display: flex;
-        padding: $spaceMedium $spaceLarger;
-        &__wrap {
-            width:79%;
-            padding-top: $spaceXSmall;
-        }
-        &__head {
-            font-size: 2.5rem;
-            margin-right: 6rem;
-            padding-top: $spaceSmall;
-        }
-    }
-} 
+
+

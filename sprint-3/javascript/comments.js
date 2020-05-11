@@ -3,6 +3,7 @@ let apiKey= "7424395f-e2a4-4e35-b456-c800d11c2d63";
 
 
 // Comments Section Javascript 
+
 // Select Relevant Sections
 let commentSection = document.querySelector(".comments");
 
@@ -18,8 +19,6 @@ let submitBtn  = document.querySelector(".comments__btn");
 
 
 // Comments Array
-
-// console.log(images);
 
 let getPromise = () => {
  return  axios.get('https://project-1-api.herokuapp.com/comments?api_key=7424395f-e2a4-4e35-b456-c800d11c2d63')
@@ -40,10 +39,6 @@ let getPromise = () => {
 }
 
 getPromise();
-
-
-
-
 
 
 // Select and Create individual container for form elements to allow for easy flex application
@@ -80,34 +75,19 @@ commentForm.addEventListener('submit', e => {
     e.preventDefault();
     let userSpace = document.querySelector(".user__comments-ctn");
     userSpace.innerHTML = "";
-    // Define an array with image fil paths
-    let ranUserImg = ['./assets/images/puppy-3.jpg', './assets/images/puppy-4.jpg',
-    './assets/images/puppy-5.jpg', './assets/images/cat-1.jpg', './assets/images/cat-2.jpg',
-    './assets/images/cat-3.jpg'    
-    ];
-    // write a function that takes the image array and runs Math.'' to select a random image
-    // Function will return the image
-    ranImg = (imgArr) => {
-        return imgArr[Math.floor(Math.random() * imgArr.length)];
-    }
     
     let newUser = e.target.userName.value;
     let newComment = e.target.userVoice.value;
-    let userImage =ranImg(ranUserImg);
 
     axios
     .post('https://project-1-api.herokuapp.com/comments?api_key=7424395f-e2a4-4e35-b456-c800d11c2d63',{
             "name": newUser,
             "comment": newComment,
-            // "image": userImage
             })
             
             .then(result => {
                 
-                let newCommentData = result.data;
-
-                
-                
+                let newCommentData = result.data; 
                 let commentSpace = displayComment(newCommentData);
                 userCommentCtn.prepend(commentSpace);
             })

@@ -11,6 +11,9 @@
         color:$white;
         font-size: $sHeader;
         padding: 0 0 $spaceMedium $spaceXSmall;
+        @include mobile-lg {
+            font-size: $header;
+        }
     }
     &__icons {
         color: $white;
@@ -37,6 +40,10 @@
         font-size: $subHeader;
         font-weight: 500;
         line-height: $subHeaderHeight;
+        @include mobile-lg {
+            font-size: 1.15rem;
+            font-weight: 500;
+        }
     }
     &__contact-item{
         color: $silver;
@@ -57,17 +64,6 @@
         line-height: $subHeaderHeight;
         padding: 0 $spaceXSmall;
       }
-    }
-    @include mobile-lg {
-        .footer{
-            &__head{
-                font-size: $header;
-            }
-        }
-        &__contact-head {
-            font-size: 1.15rem;
-            font-weight: 500;
-        }
     }
     @include tablet {
         .footer{
