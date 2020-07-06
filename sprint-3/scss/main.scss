@@ -468,8 +468,18 @@
     }
 }
 
+&__form-ctn {
+    @include tablet {
+        flex-direction: row;
+    }
+}
 
-
+&__form {
+    @include tablet {
+        flex-direction: row;
+        align-items: center;
+    }
+}
 
 
 
